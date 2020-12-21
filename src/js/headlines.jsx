@@ -5,13 +5,15 @@ const Headlines = () => {
     <section id="headlines">
       <div className="container-fluid">
         <h1 className="headlines__heading">Today's Headlines</h1>
-        <p className="headlines__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo totam maxime, voluptatibus veritatis quos earum iure error, ea nisi nesciunt cupiditate adipisci,
-          tempore dolorem repellat delectus ratione odit possimus atque architecto? Architecto fugit quis optio ipsa suscipit molestiae voluptatum ratione quibusdam facere
-          voluptas, atque sit dolorum natus veritatis, at fugiat alias quam iure rerum velit nostrum facilis assumenda dolore. Dolores cupiditate aperiam ratione fuga
-          accusamus voluptas quisquam, maxime possimus quos nam. Necessitatibus fuga, recusandae odio sit ducimus quisquam repudiandae alias! Eaque possimus eum doloribus!
-          Voluptatibus quaerat nam animi! Architecto, aut quisquam hic ipsa voluptates numquam provident sed fuga minus! Molestiae?
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem iste quasi autem, aperiam quo expedita laboriosam reprehenderit saepe omnis dolorem eum earum ipsum,
+          voluptatum maiores ab. Ipsam veniam debitis modi ea dignissimos laudantium natus quibusdam porro sequi in. Sed dicta vel suscipit provident neque quae fugiat quos
+          molestias aspernatur fuga aut consectetur autem pariatur impedit ullam, voluptatem asperiores modi aperiam distinctio! Ullam ad consequatur facilis dolorem expedita
+          beatae, explicabo impedit fugiat esse dolorum excepturi? Ullam maiores dignissimos obcaecati alias odit nemo voluptatum non ducimus explicabo minus sapiente, ut
+          inventore doloribus officiis autem! Atque, sapiente quisquam. Rerum vero maxime repellat iusto.
         </p>
+
+        <div className="grid headlines-grid"></div>
       </div>
     </section>
   );

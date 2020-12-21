@@ -1,0 +1,43 @@
+$spacer: 1rem;
+
+/* Grid */
+.grid {
+  column-gap: ($spacer + 0.5);
+  orphans: 1;
+  widows: 1;
+  column-count: 1;
+}
+
+.grid-col {
+  display: inline-block;
+  margin-bottom: ($spacer + 0.5);
+  width: 100%;
+}
+
+/* Mobile phones */
+@media (min-width: 576px) {
+  .grid {
+    column-count: 1;
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  .grid {
+    column-count: 2;
+  }
+}
+
+/* Laptops */
+@media (min-width: 992px) {
+  .grid {
+    column-count: 3;
+  }
+}
+
+/* Desktops */
+@media (min-width: 1200px) {
+  .grid {
+    column-count: 4;
+  }
+}

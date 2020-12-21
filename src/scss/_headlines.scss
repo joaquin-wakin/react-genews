@@ -7,6 +7,36 @@
   font-size: $heading-size;
 }
 
-.headlines__description {
-  color: rgba($black-color, 0.75);
+.headline-article__container {
+  background-color: $white-color;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.headline-article__header {
+  margin-bottom: 1rem;
+
+  img {
+    border-radius: 1rem;
+    width: 100%;
+  }
+}
+
+.headline-article__heading {
+  font-size: $title-size;
+}
+
+.headline-article-link__link {
+  background-color: $black-color;
+  border-radius: 0.5rem;
+  color: $white-color;
+  display: block;
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+  text-align: center;
+  width: 100%;
+
+  &:hover {
+    background-color: $secondary-color;
+  }
 }
