@@ -1,0 +1,12 @@
+#headlines {
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.headlines__heading {
+  font-size: $heading-size;
+}
+
+.headlines__description {
+  color: rgba($black-color, 0.75);
+}
