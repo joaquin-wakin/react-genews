@@ -17,7 +17,7 @@ const App = () => {
           <Route exact path="/" component={Headlines} />
         </Switch>
 
-        {/* <Footer /> */}
+        <Footer />
       </Router>
     </div>
   );
