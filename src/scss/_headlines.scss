@@ -7,6 +7,49 @@
   font-size: $heading-size;
 }
 
+.loading-spinner__container {
+  display: none;
+  margin-top: 3rem;
+  opacity: 0;
+  visibility: hidden;
+
+  .loading-spinner__spinner {
+    animation: spin 1s infinite linear;
+    border-bottom: 0.5rem solid $primary-color;
+    border-left: 0.5rem solid $primary-color;
+    border-radius: 100%;
+    border-right: 0.5rem solid transparent;
+    border-top: 0.5rem solid $primary-color;
+    height: 5rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.5s ease-in-out;
+    width: 5rem;
+  }
+
+  &.display {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  p {
+    color: rgba($black-color, 0.75);
+    text-align: center;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .headline-article__container {
   background-color: $white-color;
   border-radius: 1rem;

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -22,24 +21,18 @@ const NavMenu = () => {
   return (
     <div className="nav-menu__container">
       <ul className="nav-menu__list">
-        <Link to="/">
-          <li className="nav-menu__item">
-            <span className="nav-menu__link active">Today&apos;s Headlines</span>
-          </li>
-        </Link>
+        <li className="nav-menu__item">
+          <a href="/" className="nav-menu__link active">
+            Today&apos;s Headlines
+          </a>
+        </li>
 
-        {/* <Link to="/categories/trending"> */}
-        <NavLink linkName="Trending" />
-        {/* </Link> */}
-
-        {/* <Link to="/categories/business"> */}
-        <NavLink linkName="Business" />
-        {/* </Link> */}
-
-        <NavLink linkName="COVID-19" />
-        <NavLink linkName="Politics" />
-        <NavLink linkName="Sports" />
-        <NavLink linkName="Technology" />
+        <NavLink link="#" linkName="Trending" />
+        <NavLink link="#" linkName="Business" />
+        <NavLink link="#" linkName="COVID-19" />
+        <NavLink link="#" linkName="Politics" />
+        <NavLink link="#" linkName="Sports" />
+        <NavLink link="#" linkName="Technology" />
       </ul>
     </div>
   );
@@ -48,7 +41,9 @@ const NavMenu = () => {
 const NavLink = (props) => {
   return (
     <li className="nav-menu__item">
-      <span className="nav-menu__link">{props.linkName}</span>
+      <a href={`${props.link}`} className="nav-menu__link">
+        {props.linkName}
+      </a>
     </li>
   );
 };

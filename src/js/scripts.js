@@ -25,7 +25,7 @@ function getHeadlines() {
     },
   };
 
-  // $(".loading-spinner__container").addClass("display");
+  $(".loading-spinner__container").addClass("display");
 
   $.ajax(settings).done(function (response) {
     for (var index = 0; index < response.length; index++) {
@@ -34,7 +34,7 @@ function getHeadlines() {
         description = response[index].description,
         url = response[index].url;
 
-      // $(".loading-spinner__container").removeClass("display");
+      $(".loading-spinner__container").removeClass("display");
 
       document.querySelector(".grid").innerHTML += `
           <div class="grid-col">

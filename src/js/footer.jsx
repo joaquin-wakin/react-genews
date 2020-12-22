@@ -6,10 +6,11 @@ const Footer = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-3__small">
-            <h1>Lorem, ipsum.</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, nesciunt. Sequi voluptatum ex impedit iure necessitatibus corporis quae quisquam, numquam
-              architecto dolor minus laboriosam aliquid omnis maxime praesentium sed nam?
+            <h1 className="footer-heading">Genews</h1>
+            <h3 className="footer-sub-heading">Get the latest news</h3>
+            <p className="footer-description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, voluptas ullam. Totam corporis fugiat, sequi facere dolores, asperiores odio fuga deleniti cum
+              excepturi nam delectus. Inventore officiis ducimus quo. Sit!
             </p>
           </div>
         </div>

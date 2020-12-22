@@ -94,6 +94,11 @@ header {
     color: rgba($black-color, 0.5);
     font-weight: 400;
   }
+
+  &::selection {
+    background-color: $primary-color;
+    color: $white-color;
+  }
 }
 
 @media (min-width: 768px) {

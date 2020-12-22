@@ -3,3 +3,20 @@ footer {
   padding-bottom: 1.5rem;
   padding-top: 1.5rem;
 }
+
+.footer-heading {
+  color: $white-color;
+  font-size: 3rem;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.footer-sub-heading {
+  color: rgba($white-color, 0.75);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.footer-description {
+  color: rgba($white-color, 0.5);
+}
