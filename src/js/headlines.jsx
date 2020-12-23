@@ -4,7 +4,7 @@ const Headlines = () => {
   return (
     <section id="headlines">
       <div className="container-fluid">
-        <h1 className="headlines__heading">Today's Headlines</h1>
+        <h1 className="page-heading">Today's Headlines</h1>
 
         <div className="loading-spinner__container">
           <div className="loading-spinner__spinner"></div>

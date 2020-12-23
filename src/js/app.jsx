@@ -3,8 +3,9 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Header from "./header";
-import Headlines from "./headlines";
-import Trending from "./trending";
+import TodaysHeadlines from "./headlines";
+import Trending from "./pages/trending";
+import Business from "./pages/business";
 import Footer from "./footer";
 
 const App = () => {
@@ -14,7 +15,9 @@ const App = () => {
         <Header />
 
         <Switch>
-          <Route exact path="/" component={Headlines} />
+          <Route exact path="/" component={TodaysHeadlines} />
+          <Route path="/trending" component={Trending} />
+          <Route path="/business" component={Business} />
         </Switch>
 
         <Footer />

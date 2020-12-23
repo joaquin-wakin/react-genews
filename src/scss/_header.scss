@@ -5,6 +5,7 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
+  z-index: 100;
 
   .nav-container {
     .container-fluid {
@@ -39,6 +40,7 @@ header {
 .nav-menu__item {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+  text-align: center;
 }
 
 .nav-menu__link {
@@ -106,7 +108,7 @@ header {
     display: block;
   }
 
-  .search-form__container {
-    display: block;
-  }
+  // .search-form__container {
+  //   display: block;
+  // }
 }

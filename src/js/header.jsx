@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -21,18 +22,13 @@ const NavMenu = () => {
   return (
     <div className="nav-menu__container">
       <ul className="nav-menu__list">
-        <li className="nav-menu__item">
-          <a href="/" className="nav-menu__link active">
-            Today&apos;s Headlines
-          </a>
-        </li>
-
-        <NavLink link="#" linkName="Trending" />
-        <NavLink link="#" linkName="Business" />
-        <NavLink link="#" linkName="COVID-19" />
-        <NavLink link="#" linkName="Politics" />
-        <NavLink link="#" linkName="Sports" />
-        <NavLink link="#" linkName="Technology" />
+        <NavLink link="/" linkName="Today's Headlines" />
+        <NavLink link="trending" linkName="Trending" />
+        <NavLink link="business" linkName="Business" />
+        <NavLink link="covid-19" linkName="COVID-19" />
+        <NavLink link="politics" linkName="Politics" />
+        <NavLink link="sports" linkName="Sports" />
+        <NavLink link="technology" linkName="Technology" />
       </ul>
     </div>
   );
@@ -41,9 +37,9 @@ const NavMenu = () => {
 const NavLink = (props) => {
   return (
     <li className="nav-menu__item">
-      <a href={`${props.link}`} className="nav-menu__link">
+      <Link className="nav-menu__link" to={`${props.link}`}>
         {props.linkName}
-      </a>
+      </Link>
     </li>
   );
 };

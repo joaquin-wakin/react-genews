@@ -18,10 +18,12 @@ footer {
 
 .footer-description {
   color: rgba($white-color, 0.5);
+  font-size: $smallest-size;
 }
 
 .footer-heading__other {
   color: $white-color;
+  font-size: 1.5rem;
 }
 
 .footer-sub-heading__other {
@@ -35,6 +37,7 @@ footer {
 }
 
 .menu-item {
+  font-size: $smallest-size;
   margin-bottom: 1rem;
 
   .menu-link {
@@ -44,4 +47,9 @@ footer {
       color: $white-color;
     }
   }
+}
+
+.copyright {
+  color: $white-color;
+  text-align: center;
 }
