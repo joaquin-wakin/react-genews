@@ -9,6 +9,7 @@ const Footer = () => {
           <div className="col-3__small col-6__medium col-3__large">
             <h1 className="footer-heading">Genews</h1>
             <h3 className="footer-sub-heading">Get the latest news</h3>
+            <p className="footer-description">Access the latest trends, news about COVID-19, technology, and more within your device without any hassle.</p>
           </div>
 
           <div className="col-3__small col-6__medium col-3__large">

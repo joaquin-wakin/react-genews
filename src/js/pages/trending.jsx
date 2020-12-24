@@ -5,6 +5,7 @@ const Trending = () => {
     <section id="trending">
       <div className="container-fluid">
         <h1 className="page-heading">Trending</h1>
+        <a href="">A blank anchor tag</a>
       </div>
     </section>
   );

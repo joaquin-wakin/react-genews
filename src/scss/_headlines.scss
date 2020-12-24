@@ -69,6 +69,16 @@
   font-size: $title-size;
 }
 
+.headline-article__heading,
+.headline-article__description {
+  user-select: text;
+
+  &::selection {
+    background-color: $secondary-color;
+    color: $white-color;
+  }
+}
+
 .headline-article-link__link {
   background-color: $black-color;
   border-radius: 0.5rem;
