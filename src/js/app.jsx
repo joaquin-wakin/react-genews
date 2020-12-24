@@ -24,7 +24,7 @@ const App = () => {
           <Route
             exact
             path="/"
-            render={() => {
+            component={() => {
               Disabled();
               GetHeadlines();
               return <TodaysHeadlines />;
@@ -32,14 +32,14 @@ const App = () => {
           />
           <Route
             path="/trending"
-            render={() => {
+            component={() => {
               Disabled();
               return <Trending />;
             }}
           />
           <Route
             path="/business"
-            render={() => {
+            component={() => {
               Disabled();
               return <Business />;
             }}
@@ -47,7 +47,7 @@ const App = () => {
 
           <Route
             path="/privacy-policy"
-            render={() => {
+            component={() => {
               DisabledFunctions();
               return <PrivacyPolicy />;
             }}

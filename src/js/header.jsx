@@ -37,13 +37,7 @@ const NavMenu = () => {
 const NavLink = (props) => {
   return (
     <li className="nav-menu__item">
-      <Link
-        className="nav-menu__link"
-        to={`${props.link}`}
-        onClick={() => {
-          history.pushState;
-        }}
-      >
+      <Link className="nav-menu__link" to={`${props.link}`}>
         {props.linkName}
       </Link>
     </li>
