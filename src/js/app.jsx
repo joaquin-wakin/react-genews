@@ -8,8 +8,11 @@ import Trending from "./pages/trending";
 import Business from "./pages/business";
 import Footer from "./footer";
 
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+
 import GetHeadlines from "./scripts";
 import Disabled from "./disabled";
+import DisabledFunctions from "./disabled";
 
 const App = () => {
   return (
@@ -39,6 +42,14 @@ const App = () => {
             render={() => {
               Disabled();
               return <Business />;
+            }}
+          />
+
+          <Route
+            path="/privacy-policy"
+            render={() => {
+              DisabledFunctions();
+              return <PrivacyPolicy />;
             }}
           />
         </Switch>

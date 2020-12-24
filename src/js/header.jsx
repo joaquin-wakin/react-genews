@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import $ from "jquery";
 
 const Header = () => {
   return (
@@ -24,12 +23,12 @@ const NavMenu = () => {
     <div className="nav-menu__container">
       <ul className="nav-menu__list">
         <NavLink link="/" linkName="Today's Headlines" />
-        <NavLink link="trending" linkName="Trending" />
-        <NavLink link="business" linkName="Business" />
-        <NavLink link="covid-19" linkName="COVID-19" />
-        <NavLink link="politics" linkName="Politics" />
-        <NavLink link="sports" linkName="Sports" />
-        <NavLink link="technology" linkName="Technology" />
+        <NavLink link="/trending" linkName="Trending" />
+        <NavLink link="/business" linkName="Business" />
+        <NavLink link="/covid-19" linkName="COVID-19" />
+        <NavLink link="/politics" linkName="Politics" />
+        <NavLink link="/sports" linkName="Sports" />
+        <NavLink link="/technology" linkName="Technology" />
       </ul>
     </div>
   );
@@ -38,7 +37,13 @@ const NavMenu = () => {
 const NavLink = (props) => {
   return (
     <li className="nav-menu__item">
-      <Link className="nav-menu__link" to={`${props.link}`}>
+      <Link
+        className="nav-menu__link"
+        to={`${props.link}`}
+        onClick={() => {
+          history.pushState;
+        }}
+      >
         {props.linkName}
       </Link>
     </li>

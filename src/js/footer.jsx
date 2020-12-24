@@ -16,21 +16,21 @@ const Footer = () => {
             <h1 className="footer-heading__other">Categories</h1>
             <ul className="menu-list">
               <FooterLink link="/" linkName="Today's Headlines" />
-              <FooterLink link="trending" linkName="Trending" />
-              <FooterLink link="business" linkName="Business" />
-              <FooterLink link="covid-19" linkName="COVID-19" />
-              <FooterLink link="politics" linkName="Politics" />
-              <FooterLink link="sports" linkName="Sports" />
-              <FooterLink link="technology" linkName="Technology" />
+              <FooterLink link="/trending" linkName="Trending" />
+              <FooterLink link="/business" linkName="Business" />
+              <FooterLink link="/covid-19" linkName="COVID-19" />
+              <FooterLink link="/politics" linkName="Politics" />
+              <FooterLink link="/sports" linkName="Sports" />
+              <FooterLink link="/technology" linkName="Technology" />
             </ul>
           </div>
 
           <div className="col-3__small col-6__medium col-3__large">
             <h1 className="footer-heading__other">Information</h1>
             <ul className="menu-list">
-              <FooterLink link="privacy-policy" linkName="Privacy Policy" />
-              <FooterLink link="terms-&amp;-conditions" linkName="Terms &amp; Conditions" />
-              <FooterLink link="third-party-libraries" linkName="Third Party Libraries" />
+              <FooterLink link="/privacy-policy" linkName="Privacy Policy" />
+              <FooterLink link="/terms-&amp;-conditions" linkName="Terms &amp; Conditions" />
+              <FooterLink link="/third-party-libraries" linkName="Third Party Libraries" />
             </ul>
           </div>
 

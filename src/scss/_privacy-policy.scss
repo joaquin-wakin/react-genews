@@ -1,0 +1,31 @@
+#privacy-policy {
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.page-heading__other {
+  font-size: $heading-size;
+  margin-bottom: 1rem;
+}
+
+.section-heading {
+  font-size: $title-size;
+
+  &:not(:first-of-type) {
+    margin-top: 2.5rem;
+  }
+}
+
+.privacy-policy-paragraph {
+  a {
+    color: $primary-color;
+    text-decoration: underline;
+  }
+}
+
+.privacy-policy-list {
+  li {
+    line-height: 1.5;
+    padding-left: 0;
+  }
+}
