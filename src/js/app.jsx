@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 
 import ScrollToTop from "./ScrollToTop";
+import PageTitle from "./PageTitle";
 
 import Header from "./Header";
 import TodaysHeadlines from "./Headlines";
@@ -24,34 +25,54 @@ const App = () => {
         <Route
           exact
           path="/"
-          component={() => {
+          component={(props) => {
             Disabled();
             GetHeadlines();
-            return <TodaysHeadlines />;
+
+            return (
+              <PageTitle title="GENEWS | Get the latest news">
+                <TodaysHeadlines {...props} />;
+              </PageTitle>
+            );
           }}
         />
 
         <Route
           path="/trending"
-          component={() => {
+          component={(props) => {
             Disabled();
-            return <Trending />;
+
+            return (
+              <PageTitle title="GENEWS | Trending">
+                <Trending {...props} />
+              </PageTitle>
+            );
           }}
         />
 
         <Route
           path="/business"
-          component={() => {
+          component={(props) => {
             Disabled();
-            return <Business />;
+
+            return (
+              <PageTitle title="GENEWS | Business">
+                <Business {...props} />
+              </PageTitle>
+            );
           }}
         />
 
         <Route
           path="/privacy-policy"
-          component={() => {
+          component={(props) => {
             Disabled();
-            return <PrivacyPolicy />;
+
+            return (
+              <PageTitle title="GENEWS | Privacy Policy">
+                <PrivacyPolicy {...props} />
+              </PageTitle>
+            );
           }}
         />
       </Switch>
