@@ -10,10 +10,6 @@
 
 .section-heading {
   font-size: $title-size;
-
-  &:not(:first-of-type) {
-    margin-top: 2.5rem;
-  }
 }
 
 .privacy-policy-paragraph {
@@ -28,4 +24,8 @@
     line-height: 1.5;
     padding-left: 0;
   }
+}
+
+.contact-us {
+  font-style: italic;
 }

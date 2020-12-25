@@ -138,25 +138,72 @@ const PrivacyPolicy = () => {
           <h3>Website Analytics</h3>
           <p className="privacy-policy-paragraph">
             We may also partner with selected third-party vendors, such as{" "}
-            <PrivacyPolicyLink link="https://www.adobe.com/privacy/experience-cloud.html" linkName="Adobe Analytics" />,{" "}
-            <PrivacyPolicyLink link="https://www.clicktale.com/errorpage.html?aspxerrorpath=/company/privacy-policy/" linkName="Clicktale" />,{" "}
-            <PrivacyPolicyLink link="https://clicky.com/terms" linkName="Clicky" />,{" "}
-            <PrivacyPolicyLink link="https://www.cloudflare.com/privacypolicy/" linkName="Cloudfare" />,{" "}
-            <PrivacyPolicyLink link="https://www.crazyegg.com/privacy/" linkName="Crazy Egg" />,{" "}
-            <PrivacyPolicyLink link="https://www.verizonmedia.com/policies/us/en/verizonmedia/privacy/products/developer/index.html" linkName="Flurry Analytics" />,{" "}
-            <PrivacyPolicyLink link="https://support.google.com/analytics/answer/6004245?hl=en" linkName="Google Analytics" />,{" "}
-            <PrivacyPolicyLink link="https://heap.io/privacy" linkName="Heap Analytics" />,{" "}
-            <PrivacyPolicyLink link="https://www.inspectlet.com/legal#privacy" linkName="Inspectlet" />,{" "}
-            <PrivacyPolicyLink link="https://www.kissmetrics.io/privacy/" linkName="Kissmetrics" />,{" "}
-            <PrivacyPolicyLink link="https://mixpanel.com/legal/privacy-policy/" linkName="Mixpanel" />,{" "}
-            <PrivacyPolicyLink link="https://matomo.org/privacy/" linkName="Piwik" />, and others, to allow tracking technologies and remarketing services on the site (and our
-            mobile application) through the use of first party cookies and third-party cookies, to, among other things, analyze and track users’ use of the site (and our
-            mobile application) , determine the popularity of certain content and better understand online activity. By accessing the site (our mobile application), you
-            consent to the collection and use of your information by these third-party vendors. You are encouraged to review their privacy policy and contact them directly for
-            responses to your questions. We do not transfer personal information to these third-party vendors. However, if you do not want any information to be collected and
-            used by tracking technologies, you can visit the third-party vendor or the{" "}
-            <PrivacyPolicyLink link="https://optout.networkadvertising.org/?c=1" linkName="Network Advertising Initiative Opt-Out Tool" />, or{" "}
-            <PrivacyPolicyLink link="https://optout.aboutads.info/?c=2&lang=EN" linkName="Digital Advertising Alliance Opt-Out Tool" />.
+            <ExternalLink link="https://www.adobe.com/privacy/experience-cloud.html" linkName="Adobe Analytics" />,{" "}
+            <ExternalLink link="https://www.clicktale.com/errorpage.html?aspxerrorpath=/company/privacy-policy/" linkName="Clicktale" />,{" "}
+            <ExternalLink link="https://clicky.com/terms" linkName="Clicky" />, <ExternalLink link="https://www.cloudflare.com/privacypolicy/" linkName="Cloudfare" />,{" "}
+            <ExternalLink link="https://www.crazyegg.com/privacy/" linkName="Crazy Egg" />,{" "}
+            <ExternalLink link="https://www.verizonmedia.com/policies/us/en/verizonmedia/privacy/products/developer/index.html" linkName="Flurry Analytics" />,{" "}
+            <ExternalLink link="https://support.google.com/analytics/answer/6004245?hl=en" linkName="Google Analytics" />,{" "}
+            <ExternalLink link="https://heap.io/privacy" linkName="Heap Analytics" />, <ExternalLink link="https://www.inspectlet.com/legal#privacy" linkName="Inspectlet" />,{" "}
+            <ExternalLink link="https://www.kissmetrics.io/privacy/" linkName="Kissmetrics" />,{" "}
+            <ExternalLink link="https://mixpanel.com/legal/privacy-policy/" linkName="Mixpanel" />, <ExternalLink link="https://matomo.org/privacy/" linkName="Piwik" />, and
+            others, to allow tracking technologies and remarketing services on the site (and our mobile application) through the use of first party cookies and third-party
+            cookies, to, among other things, analyze and track users’ use of the site (and our mobile application) , determine the popularity of certain content and better
+            understand online activity. By accessing the site (our mobile application), you consent to the collection and use of your information by these third-party vendors.
+            You are encouraged to review their privacy policy and contact them directly for responses to your questions. We do not transfer personal information to these
+            third-party vendors. However, if you do not want any information to be collected and used by tracking technologies, you can visit the third-party vendor or the{" "}
+            <ExternalLink link="https://optout.networkadvertising.org/?c=1" linkName="Network Advertising Initiative Opt-Out Tool" />, or{" "}
+            <ExternalLink link="https://optout.aboutads.info/?c=2&lang=EN" linkName="Digital Advertising Alliance Opt-Out Tool" />.
+          </p>
+
+          <p className="privacy-policy-paragraph">
+            You should be aware that getting a new computer, installing a new browser, upgrading an existing browser, or erasing or otherwise altering your browser’s cookies
+            files may also clear certain opt-out cookies, plug-ins, or settings.
+          </p>
+
+          <h3 className="section-heading">Security of your Information</h3>
+          <p className="privacy-policy-paragraph">
+            We use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the
+            personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data
+            transmission can be guaranteed against any interception or other type of misuse. Any information disclosed online is vulnerable to interception and misuse by
+            unauthorized parties. Therefore, we cannot guarantee complete security if you provide personal information.
+          </p>
+
+          <h3 className="section-heading">Policy for Children</h3>
+          <p className="privacy-policy-paragraph">
+            We do not knowingly solicit information from or market to children under the age of 13. If you become aware of any data we have collected from children under age
+            13, please contact us using the contact information provided below.
+          </p>
+
+          <h3 className="section-heading">Options Regarding your Information</h3>
+          <h3>Account Information</h3>
+          <p className="privacy-policy-paragraph">You may at any time review or change the information in your account or terminate your account by:</p>
+          <ul className="privacy-policy-list">
+            <li>Logging into your account settings and updating your account</li>
+            <li>Contacting us using the contact information provided below</li>
+          </ul>
+
+          <p className="privacy-policy-paragraph">
+            Upon your request to terminate your account, we will deactivate or delete your account and information from our active databases. However, some information may be
+            retained in our files to prevent fraud, troubleshoot problems, assist with any investigations, enforce our Terms of Use and/or comply with legal requirements.
+          </p>
+
+          <h3>E-mails and Communications</h3>
+          <p className="privacy-policy-paragraph">If you no longer wish to receive correspondence, emails, or other communications from us, you may opt-out by:</p>
+          <ul className="privacy-policy-list">
+            <li>Noting your preferences at the time you register your account with the site (or our mobile application)</li>
+            <li>Logging into your account settings and updating your preferences</li>
+            <li>Contacting us using the contact information provided below</li>
+          </ul>
+
+          <p className="privacy-policy-paragraph">
+            If you no longer wish to receive correspondence, e-mails, or other communications from third parties, you are responsible for contacting the third party directly.
+          </p>
+
+          <h3 className="section-heading">Contact</h3>
+          <p className="privacy-policy-paragraph">If you have questions or comments about this Privacy Policy, please contact us at:</p>
+          <p className="privacy-policy-paragraph contact-us">
+            <b>GENEWS</b> <br /> Quirino Highway, Tungkong Mangga, San Jose Del Monte City, 3023 Bulacan <br /> valdez.188213@sjdelmonte.sti.edu.ph
           </p>
         </div>
       </section>
@@ -164,7 +211,7 @@ const PrivacyPolicy = () => {
   );
 };
 
-const PrivacyPolicyLink = (props) => {
+const ExternalLink = (props) => {
   return (
     <a href={`${props.link}`} target="_blank">
       {props.linkName}

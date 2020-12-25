@@ -1,63 +1,64 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
-import Header from "./header";
-import TodaysHeadlines from "./headlines";
-import Trending from "./pages/trending";
-import Business from "./pages/business";
-import Footer from "./footer";
+import ScrollToTop from "./ScrollToTop";
+
+import Header from "./Header";
+import TodaysHeadlines from "./Headlines";
+import Trending from "./pages/Trending";
+import Business from "./pages/Business";
+import Footer from "./Footer";
 
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 
-import GetHeadlines from "./scripts";
-import Disabled from "./disabled";
-import DisabledFunctions from "./disabled";
+import GetHeadlines from "./GetHeadlines";
+import Disabled from "./Disabled";
 
 const App = () => {
   return (
     <div id="app-container">
-      <Router>
-        <Header />
+      <Header />
+      <ScrollToTop />
 
-        <Switch>
-          <Route
-            exact
-            path="/"
-            component={() => {
-              Disabled();
-              GetHeadlines();
-              return <TodaysHeadlines />;
-            }}
-          />
-          <Route
-            path="/trending"
-            component={() => {
-              Disabled();
-              return <Trending />;
-            }}
-          />
-          <Route
-            path="/business"
-            component={() => {
-              Disabled();
-              return <Business />;
-            }}
-          />
+      <Switch>
+        <Route
+          exact
+          path="/"
+          component={() => {
+            Disabled();
+            GetHeadlines();
+            return <TodaysHeadlines />;
+          }}
+        />
 
-          <Route
-            path="/privacy-policy"
-            component={() => {
-              DisabledFunctions();
-              return <PrivacyPolicy />;
-            }}
-          />
-        </Switch>
+        <Route
+          path="/trending"
+          component={() => {
+            Disabled();
+            return <Trending />;
+          }}
+        />
 
-        <Footer />
-      </Router>
+        <Route
+          path="/business"
+          component={() => {
+            Disabled();
+            return <Business />;
+          }}
+        />
+
+        <Route
+          path="/privacy-policy"
+          component={() => {
+            Disabled();
+            return <PrivacyPolicy />;
+          }}
+        />
+      </Switch>
+
+      <Footer />
     </div>
   );
 };
 
-ReactDOM.render(<App />, document.getElementById("root"));
+export default App;
