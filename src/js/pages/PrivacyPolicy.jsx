@@ -14,7 +14,7 @@ const PrivacyPolicy = () => {
           </p>
 
           <p className="privacy-policy-paragraph">
-            We reserve the right to make changes to this Privacy Policy at any time and for any reason. We will alert you about any changes by updating the “Last Updated” date
+            We reserve the right to make changes to this Privacy Policy at any time and for any reason. We will alert you about any changes by updating the "last updated" date
             of this Privacy Policy. Any changes or modifications will be effective immediately upon posting the updated Privacy Policy on the Site, and you waive the right to
             receive specific notice of each such change or modification.
           </p>

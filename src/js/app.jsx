@@ -17,7 +17,7 @@ import Disabled from "./Disabled";
 
 const App = () => {
   return (
-    <div id="app-container">
+    <>
       <Header />
       <ScrollToTop />
 
@@ -78,7 +78,7 @@ const App = () => {
       </Switch>
 
       <Footer />
-    </div>
+    </>
   );
 };
 

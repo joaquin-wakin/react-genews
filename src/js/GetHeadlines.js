@@ -1,18 +1,15 @@
 import $ from "jquery";
 
 const GetHeadlines = () => {
-  document.cookie = "SameSite = None; Secure";
-
   function getSearchInputValue() {
     $(".search-form").on("submit", function (event) {
       event.preventDefault();
-      const userInput = $(".search-input").val();
+      const userInput = new $(".search-input").val();
 
       if ($(".search-input").val() == 0) {
         return false;
       } else {
         searchUserInput();
-        $(".search-input").val("");
         this.reset();
       }
 
@@ -35,17 +32,26 @@ const GetHeadlines = () => {
         $.ajax(settings).done(function (response) {
           // console.log(response);
 
-          $(".page-heading").html(`Search results for "${userInput}"`);
-          $(".grid").empty();
-          $(".loading-spinner__container").removeClass("display");
+          if (response.news.length == 0) {
+            $(".page-heading").html(`No matches for "${userInput}"`);
+            $(".grid").empty();
+            $(".loading-spinner__container").removeClass("display");
+            $(".no-match").addClass("display");
 
-          for (var index = 0; index < response.news.length; index++) {
-            var img = response.news[index].image,
-              heading = response.news[index].title,
-              description = response.news[index].description,
-              url = response.news[index].url;
+            // console.log("Not found.");
+          } else {
+            $(".page-heading").html(`Search results for "${userInput}"`);
+            $(".grid").empty();
+            $(".loading-spinner__container").removeClass("display");
+            $(".no-match").removeClass("display");
 
-            document.querySelector(".grid").innerHTML += `
+            for (var index = 0; index < response.news.length; index++) {
+              var img = response.news[index].image,
+                heading = response.news[index].title,
+                description = response.news[index].description,
+                url = response.news[index].url;
+
+              document.querySelector(".grid").innerHTML += `
               <div class="grid-col">
                 <div class="headline-article__container">
                   <div class="headline-article__header">
@@ -62,18 +68,23 @@ const GetHeadlines = () => {
                   </div>
                 </div>
               </div>`;
-          }
+            }
 
-          $("img, a").on("dragstart", function (event) {
-            event.preventDefault();
-          });
+            $("img, a").on("dragstart", function (event) {
+              event.preventDefault();
+            });
+
+            // console.log("Found.");
+          }
         });
       }
     });
   }
 
+  document.cookie = "SameSite = None; Secure";
+
   // Fetches local headlines on first loading of the webpage
-  function getHeadlines() {
+  function fetchHeadlines() {
     const settings = {
       async: true,
       crossDomain: true,
@@ -123,7 +134,7 @@ const GetHeadlines = () => {
 
   $(function () {
     getSearchInputValue();
-    getHeadlines();
+    fetchHeadlines();
   });
 };
 
