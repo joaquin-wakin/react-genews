@@ -31,7 +31,7 @@ const App = () => {
 
             return (
               <PageTitle title="GENEWS | Get the latest news">
-                <TodaysHeadlines {...props} />;
+                <TodaysHeadlines {...props} />
               </PageTitle>
             );
           }}
