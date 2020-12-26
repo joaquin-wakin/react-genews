@@ -17,6 +17,7 @@
 $primary-color: #e50914;
 $secondary-color: #b81d24;
 $black-color: #221f1f;
+$black: #000000;
 $white-color: #f5f5f1;
 $white: #ffffff;
 
@@ -34,8 +35,10 @@ $smallest-size: 0.8rem;
 @import "row";
 @import "grid";
 @import "header";
+@import "mobile-nav";
 @import "headlines";
 @import "trending";
 @import "business";
 @import "footer";
 @import "privacy-policy";
+@import "terms-and-conditions";

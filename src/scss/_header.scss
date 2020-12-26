@@ -103,6 +103,13 @@ header {
   }
 }
 
+.mobile-nav-hamburger {
+  .hamburger-icon {
+    color: $white-color;
+    font-size: 2.5rem;
+  }
+}
+
 @media (min-width: 768px) {
   .nav-menu__container {
     display: block;
@@ -110,5 +117,9 @@ header {
 
   .search-form__container {
     display: block;
+  }
+
+  .mobile-nav-hamburger {
+    display: none;
   }
 }

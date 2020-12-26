@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import $ from "jquery";
 
 const Header = () => {
   return (
@@ -12,6 +13,7 @@ const Header = () => {
 
           <NavMenu />
           <SearchForm />
+          <MobileNavHamburger />
         </div>
       </nav>
     </header>
@@ -53,6 +55,25 @@ const SearchForm = () => {
           <input type="text" className="search-input" placeholder="Search..." />
         </div>
       </form>
+    </div>
+  );
+};
+
+const MobileNavHamburger = () => {
+  function SlideMenu() {
+    $("body").addClass("scroll-disabled");
+    $("#mobile-navigation").addClass("active");
+    $("#overlay").addClass("active");
+
+    $("#overlay").on("click", function () {
+      $("#mobile-navigation").removeClass("active");
+      $(this).removeClass("active");
+    });
+  }
+
+  return (
+    <div className="mobile-nav-hamburger">
+      <i className="bx bx-menu hamburger-icon" onClick={SlideMenu}></i>
     </div>
   );
 };
