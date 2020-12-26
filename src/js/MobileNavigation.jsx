@@ -18,6 +18,10 @@ const MobileNavigation = () => {
             <h1 className="mobile-nav__heading">Genews</h1>
           </div>
 
+          <MobileSearchBar />
+
+          <h3 className="mobile-categories__text">Categories</h3>
+
           <div className="mobile-links">
             <ul className="mobile-links__list">
               <MobileNavLink link="/" linkName="Today's Headlines" />
@@ -38,6 +42,34 @@ const MobileNavigation = () => {
 
       <div id="overlay"></div>
     </>
+  );
+};
+
+const MobileSearchBar = () => {
+  function submitSearchInput(event) {
+    event.preventDefault();
+    const userInput = $(".search-bar__input").val();
+
+    if (userInput == 0) {
+      return false;
+    } else {
+      console.log(userInput);
+      $(".search-bar__input").val("");
+      CloseMenuOnClick();
+    }
+  }
+
+  return (
+    <div id="mobile-search-bar__contianer">
+      <div className="search-bar__container">
+        <form className="search-bar__form" onSubmit={submitSearchInput}>
+          <div className="search-bar-input__container">
+            <i className="bx bx-search search-icon"></i>
+            <input type="text" className="search-bar__input" placeholder="Search" />
+          </div>
+        </form>
+      </div>
+    </div>
   );
 };
 
