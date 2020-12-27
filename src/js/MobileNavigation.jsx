@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import $ from "jquery";
 
 function CloseMenuOnClick() {
+  $("body").removeClass("disabled-scroll");
   $("#mobile-navigation").removeClass("active");
   $("#overlay").removeClass("active");
 }

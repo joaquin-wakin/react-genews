@@ -1,3 +1,9 @@
+body {
+  &.disabled-scroll {
+    overflow: hidden;
+  }
+}
+
 #mobile-navigation {
   background-color: $black;
   height: 100%;
@@ -16,7 +22,7 @@
 
 .mobile-nav__inner-container {
   height: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
   width: 100%;
 }
 
@@ -96,6 +102,8 @@
 }
 
 #copyrights {
+  margin-top: 2rem;
+
   p {
     color: rgba($white-color, 0.5);
     font-size: $smallest-size;

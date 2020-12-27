@@ -61,13 +61,9 @@ const SearchForm = () => {
 
 const MobileNavHamburger = () => {
   function SlideMenu() {
+    $("body").addClass("disabled-scroll");
     $("#mobile-navigation").addClass("active");
     $("#overlay").addClass("active");
-
-    $("#overlay").on("click", function () {
-      $("#mobile-navigation").removeClass("active");
-      $(this).removeClass("active");
-    });
   }
 
   return (
