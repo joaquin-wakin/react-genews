@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import $ from "jquery";
 
 function CloseMenuOnClick() {
-  $("body").removeClass("scroll-disabled");
   $("#mobile-navigation").removeClass("active");
   $("#overlay").removeClass("active");
 }
@@ -20,7 +19,7 @@ const MobileNavigation = () => {
 
           <MobileSearchBar />
 
-          <h3 className="mobile-categories__text">Categories</h3>
+          <h3 className="mobile-nav__text">Categories</h3>
 
           <div className="mobile-links">
             <ul className="mobile-links__list">
@@ -31,6 +30,15 @@ const MobileNavigation = () => {
               <MobileNavLink link="/politcs" linkName="Politics" />
               <MobileNavLink link="/sports" linkName="Sports" />
               <MobileNavLink link="/technology" linkName="Technology" />
+            </ul>
+          </div>
+
+          <h3 className="mobile-nav__text">Information</h3>
+          <div className="mobile-links">
+            <ul className="mobile-links__list">
+              <MobileNavLink link="/privacy-policy" linkName="Privacy Policy" />
+              <MobileNavLink link="/terms-&-conditions" linkName="Terms & Conditions" />
+              <MobileNavLink link="/third-party-libraries" linkName="Third Party Libraries" />
             </ul>
           </div>
 
