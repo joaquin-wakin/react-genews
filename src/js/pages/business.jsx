@@ -5,11 +5,19 @@ const Business = () => {
     <section id="business">
       <div className="container-fluid">
         <h1 className="page-heading">Business</h1>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo consequatur a laudantium nesciunt corporis animi aliquam? Veniam nemo doloribus tempora, modi
-          consectetur ipsam harum sint neque repellat labore fugit perferendis consequatur sed? Iste vel voluptatibus provident explicabo qui nobis, quia exercitationem hic
-          consequuntur et ullam suscipit omnis expedita. Soluta, neque perspiciatis, debitis, pariatur vel eveniet explicabo sed nam provident iusto nisi quasi odio eos!
-        </p>
+
+        <div className="loading-spinner__container">
+          <div className="loading-spinner__spinner"></div>
+          <p>Getting news about business...</p>
+        </div>
+
+        <div className="no-match">
+          {/* <i class="bx bx-news"></i> */}
+          <i className="bx bx-unlink"></i>
+          <p>No articles were found.</p>
+        </div>
+
+        <div className="grid business-grid"></div>
       </div>
     </section>
   );

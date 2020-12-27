@@ -23,13 +23,18 @@ body {
 .mobile-nav__inner-container {
   height: 100%;
   overflow-y: auto;
+  position: relative;
   width: 100%;
 }
 
 .mobile-nav__header {
   align-items: center;
+  background-color: $black;
   display: flex;
-  margin-bottom: 1rem;
+  left: 0;
+  padding-bottom: 1rem;
+  position: sticky;
+  top: 0;
 
   i {
     color: $white-color;
@@ -102,10 +107,10 @@ body {
 }
 
 #copyrights {
-  margin-top: 2rem;
+  margin-top: 3rem;
 
   p {
-    color: rgba($white-color, 0.5);
+    color: $white-color;
     font-size: $smallest-size;
     margin-bottom: 0;
   }

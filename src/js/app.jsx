@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 
 import ScrollToTop from "./ScrollToTop";
@@ -15,6 +15,8 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 
 import GetHeadlines from "./GetHeadlines";
+import GetTrending from "./GetTrending";
+import GetBusinessNews from "./GetBusinessNews";
 import Disabled from "./Disabled";
 
 const App = () => {
@@ -29,8 +31,10 @@ const App = () => {
           exact
           path="/"
           component={(props) => {
-            Disabled();
-            GetHeadlines();
+            useEffect(() => {
+              Disabled();
+              GetHeadlines();
+            }, []);
 
             return (
               <PageTitle title="GENEWS | Get the latest news">
@@ -43,7 +47,11 @@ const App = () => {
         <Route
           path="/trending"
           component={(props) => {
-            Disabled();
+            useEffect(() => {
+              Disabled();
+            }, []);
+
+            GetTrending();
 
             return (
               <PageTitle title="GENEWS | Trending">
@@ -56,7 +64,11 @@ const App = () => {
         <Route
           path="/business"
           component={(props) => {
-            Disabled();
+            useEffect(() => {
+              Disabled();
+            }, []);
+
+            GetBusinessNews();
 
             return (
               <PageTitle title="GENEWS | Business">
@@ -80,12 +92,12 @@ const App = () => {
         />
 
         <Route
-          path="/terms-&-conditions"
+          path="/terms-&amp;-conditions"
           component={(props) => {
             Disabled();
 
             return (
-              <PageTitle title="GENEWS | Terms & Conditions">
+              <PageTitle title="GENEWS | Terms &amp; Conditions">
                 <TermsAndConditions {...props} />
               </PageTitle>
             );

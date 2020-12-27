@@ -1,7 +1,7 @@
 import $ from "jquery";
 
-const GetHeadlines = () => {
-  function getSearchInputValue() {
+const GetTrending = () => {
+  function GetSearchInputValue() {
     $(".search-form").on("submit", function (event) {
       event.preventDefault();
       const userInput = new $(".search-input").val();
@@ -35,14 +35,14 @@ const GetHeadlines = () => {
 
           if (response.news.length == 0) {
             $(".page-heading").html(`No matches for "${userInput}"`);
-            $(".grid").empty();
+            $(".trending-grid").empty();
             $(".loading-spinner__container").removeClass("display");
             $(".no-match").addClass("display");
 
             // console.log("Not found.");
           } else {
             $(".page-heading").html(`Search results for "${userInput}"`);
-            $(".grid").empty();
+            $(".trending-grid").empty();
             $(".loading-spinner__container").removeClass("display");
             $(".no-match").removeClass("display");
 
@@ -52,7 +52,7 @@ const GetHeadlines = () => {
                 description = response.news[index].description,
                 url = response.news[index].url;
 
-              document.querySelector(".grid").innerHTML += `
+              document.querySelector(".trending-grid").innerHTML += `
               <div class="grid-col">
                 <div class="headline-article__container">
                   <div class="headline-article__header">
@@ -82,14 +82,13 @@ const GetHeadlines = () => {
     });
   }
 
-  document.cookie = "SameSite = None; Secure";
+  function GetTrendingNews() {
+    const category = "trending topics";
 
-  // Fetches local headlines on first loading of the webpage
-  function fetchHeadlines() {
     const settings = {
       async: true,
       crossDomain: true,
-      url: "https://news67.p.rapidapi.com/inter-country?country2=ph&langs=en&country1=ph&skip=1&limit=21",
+      url: `https://news67.p.rapidapi.com/topic-research?search=${category}&skip=0&limit=21&from=2020-11-30&langs=en`,
       method: "GET",
       headers: {
         "x-rapidapi-key": "734c8025e8msh3008a9e94311a28p13ee78jsn4f7e98ac6131",
@@ -100,43 +99,45 @@ const GetHeadlines = () => {
     $(".loading-spinner__container").addClass("display");
 
     $.ajax(settings).done(function (response) {
-      for (var index = 0; index < response.length; index++) {
-        var img = response[index].image,
-          heading = response[index].title,
-          description = response[index].description,
-          url = response[index].url;
+      // console.log(response);
 
-        $(".loading-spinner__container").removeClass("display");
+      $(".loading-spinner__container").removeClass("display");
 
-        document.querySelector(".grid").innerHTML += `
-            <div class="grid-col">
-              <div class="headline-article__container">
-                <div class="headline-article__header">
-                  <img src="${img}" alt="" />
-                </div>
+      for (var index = 0; index < response.news.length; index++) {
+        var img = response.news[index].image,
+          heading = response.news[index].title,
+          description = response.news[index].description,
+          url = response.news[index].url;
 
-                <div class="headline-article__body">
-                  <h1 class="headline-article__heading">${heading}</h1>
-                  <p class="headline-article__description">${description}</p>
+        document.querySelector(".trending-grid").innerHTML += `
+        <div class="grid-col">
+          <div class="headline-article__container">
+            <div class="headline-article__header">
+              <img src="${img}" alt="" />
+            </div>
 
-                  <div class="headline-article-link__container">
-                    <a href="${url}" class="headline-article-link__link" target="_blank">Read more</a>
-                  </div>
-                </div>
+            <div class="headline-article__body">
+              <h1 class="headline-article__heading">${heading}</h1>
+              <p class="headline-article__description">${description}</p>
+
+              <div class="headline-article-link__container">
+                <a href="${url}" class="headline-article-link__link" target="_blank">Read more</a>
               </div>
-            </div>`;
-
-        $("img, a").on("dragstart", function (event) {
-          event.preventDefault();
-        });
+            </div>
+          </div>
+        </div>`;
       }
+
+      $("img, a").on("dragstart", function (event) {
+        event.preventDefault();
+      });
     });
   }
 
   $(function () {
-    getSearchInputValue();
-    fetchHeadlines();
+    GetSearchInputValue();
+    GetTrendingNews();
   });
 };
 
-export default GetHeadlines;
+export default GetTrending;

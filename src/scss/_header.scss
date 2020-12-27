@@ -89,8 +89,10 @@ header {
 .search-input {
   background-color: $white-color;
   border: none;
+  display: block;
   font-size: $base-size;
   outline: none;
+  width: 100%;
 
   &::placeholder {
     color: rgba($black-color, 0.5);

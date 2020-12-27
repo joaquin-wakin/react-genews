@@ -51,5 +51,11 @@ footer {
 
 .copyright {
   color: $white-color;
-  text-align: center;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .copyright {
+    text-align: center;
+  }
 }

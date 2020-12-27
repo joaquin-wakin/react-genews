@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import $ from "jquery";
 
-function CloseMenuOnClick() {
+function CloseMenu() {
   $("body").removeClass("disabled-scroll");
   $("#mobile-navigation").removeClass("active");
   $("#overlay").removeClass("active");
@@ -14,7 +14,7 @@ const MobileNavigation = () => {
       <nav id="mobile-navigation">
         <div className="mobile-nav__inner-container">
           <div className="mobile-nav__header">
-            <i className="bx bx-arrow-back" onClick={CloseMenuOnClick}></i>
+            <i className="bx bx-arrow-back" onClick={CloseMenu}></i>
             <h1 className="mobile-nav__heading">Genews</h1>
           </div>
 
@@ -38,7 +38,7 @@ const MobileNavigation = () => {
           <div className="mobile-links">
             <ul className="mobile-links__list">
               <MobileNavLink link="/privacy-policy" linkName="Privacy Policy" />
-              <MobileNavLink link="/terms-&-conditions" linkName="Terms & Conditions" />
+              <MobileNavLink link="/terms-&amp;-conditions" linkName="Terms & Conditions" />
               <MobileNavLink link="/third-party-libraries" linkName="Third Party Libraries" />
             </ul>
           </div>
@@ -64,7 +64,7 @@ const MobileSearchBar = () => {
     } else {
       console.log(userInput);
       $(".search-bar__input").val("");
-      CloseMenuOnClick();
+      CloseMenu();
     }
   }
 
@@ -85,7 +85,7 @@ const MobileSearchBar = () => {
 const MobileNavLink = (props) => {
   return (
     <li className="mobile-links__item">
-      <Link to={`${props.link}`} className="mobile-links__link" onClick={CloseMenuOnClick}>
+      <Link to={`${props.link}`} className="mobile-links__link" onClick={CloseMenu}>
         {props.linkName}
       </Link>
     </li>
