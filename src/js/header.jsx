@@ -12,7 +12,6 @@ const Header = () => {
           </a>
 
           <NavMenu />
-          <SearchForm />
           <MobileNavHamburger />
         </div>
       </nav>
@@ -25,12 +24,14 @@ const NavMenu = () => {
     <div className="nav-menu__container">
       <ul className="nav-menu__list">
         <NavLink link="/" linkName="Today's Headlines" />
-        <NavLink link="/trending" linkName="Trending" />
         <NavLink link="/business" linkName="Business" />
         <NavLink link="/covid-19" linkName="COVID-19" />
+        <NavLink link="/future" linkName="Future" />
         <NavLink link="/politics" linkName="Politics" />
         <NavLink link="/sports" linkName="Sports" />
         <NavLink link="/technology" linkName="Technology" />
+        <NavLink link="/travel" linkName="Travel" />
+        <NavLink link="/trending" linkName="Trending" />
       </ul>
     </div>
   );

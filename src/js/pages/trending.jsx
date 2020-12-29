@@ -1,23 +1,70 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import $ from "jquery";
+import "regenerator-runtime/runtime";
+
+import disabled from "../Disabled";
+
+import LoadingAnimation from "../LoadingAnimation";
 
 const Trending = () => {
+  const [trending, setTrending] = useState([]);
+
+  const fetchTrendingNews = async () => {
+    $(".loading-spinner__container").addClass("display");
+
+    const category = "trending topics";
+
+    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=${category}&skip=0&limit=21&from=2020-11-30&langs=en`, {
+      method: "GET",
+      headers: {
+        "x-rapidapi-key": "734c8025e8msh3008a9e94311a28p13ee78jsn4f7e98ac6131",
+        "x-rapidapi-host": "news67.p.rapidapi.com",
+      },
+    });
+
+    const response = await data.json();
+    document.cookie = "SameSite=None; Secure";
+    setTrending(response.news);
+
+    $(".loading-spinner__container").removeClass("display");
+  };
+
+  useEffect(() => {
+    disabled();
+    fetchTrendingNews();
+  }, []);
+
   return (
     <section id="trending">
       <div className="container-fluid">
         <h1 className="page-heading">Trending</h1>
 
-        <div className="loading-spinner__container">
-          <div className="loading-spinner__spinner"></div>
-          <p>Getting latest trending news...</p>
-        </div>
+        <LoadingAnimation text="Getting latest trending news..." />
 
-        <div className="no-match">
-          {/* <i class="bx bx-news"></i> */}
-          <i className="bx bx-unlink"></i>
-          <p>No articles were found.</p>
-        </div>
+        <div className="grid">
+          {trending.map((trendingNews) => {
+            return (
+              <div className="grid-col" key={`${trendingNews._id}`}>
+                <div className="headline-article__container">
+                  <div className="headline-article__header">
+                    <img src={`${trendingNews.image}`} alt="" />
+                  </div>
 
-        <div className="grid trending-grid"></div>
+                  <div className="headline-article__body">
+                    <h1 className="headline-article__heading">{trendingNews.title}</h1>
+                    <p className="headline-article__description">{trendingNews.description}</p>
+
+                    <div className="headline-article-link__container">
+                      <a href={`${trendingNews.url}`} className="headline-article-link__link" target="_blank">
+                        Read more
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

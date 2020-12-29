@@ -14,6 +14,8 @@
 }
 
 .privacy-policy-paragraph {
+  font-size: $smallest-size;
+
   a {
     color: $primary-color;
     text-decoration: underline;
@@ -22,8 +24,8 @@
 
 .privacy-policy-list {
   li {
+    font-size: $smallest-size;
     line-height: 1.5;
-    padding-left: 0;
   }
 }
 

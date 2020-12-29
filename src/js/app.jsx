@@ -14,9 +14,6 @@ import Footer from "./Footer";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 
-import GetHeadlines from "./GetHeadlines";
-import GetTrending from "./GetTrending";
-import GetBusinessNews from "./GetBusinessNews";
 import Disabled from "./Disabled";
 
 const App = () => {
@@ -31,11 +28,6 @@ const App = () => {
           exact
           path="/"
           component={(props) => {
-            useEffect(() => {
-              Disabled();
-              GetHeadlines();
-            }, []);
-
             return (
               <PageTitle title="GENEWS | Get the latest news">
                 <TodaysHeadlines {...props} />
@@ -45,34 +37,22 @@ const App = () => {
         />
 
         <Route
-          path="/trending"
+          path="/business"
           component={(props) => {
-            useEffect(() => {
-              Disabled();
-            }, []);
-
-            GetTrending();
-
             return (
-              <PageTitle title="GENEWS | Trending">
-                <Trending {...props} />
+              <PageTitle title="GENEWS | Business">
+                <Business {...props} />
               </PageTitle>
             );
           }}
         />
 
         <Route
-          path="/business"
+          path="/trending"
           component={(props) => {
-            useEffect(() => {
-              Disabled();
-            }, []);
-
-            GetBusinessNews();
-
             return (
-              <PageTitle title="GENEWS | Business">
-                <Business {...props} />
+              <PageTitle title="GENEWS | Trending">
+                <Trending {...props} />
               </PageTitle>
             );
           }}

@@ -18,19 +18,21 @@ const MobileNavigation = () => {
             <h1 className="mobile-nav__heading">Genews</h1>
           </div>
 
-          <MobileSearchBar />
+          {/* <MobileSearchBar /> */}
 
           <h3 className="mobile-nav__text">Categories</h3>
 
           <div className="mobile-links">
             <ul className="mobile-links__list">
               <MobileNavLink link="/" linkName="Today's Headlines" />
-              <MobileNavLink link="/trending" linkName="Trending" />
               <MobileNavLink link="/business" linkName="Business" />
               <MobileNavLink link="/covid-19" linkName="COVID-19" />
+              <MobileNavLink link="/future" linkName="Future" />
               <MobileNavLink link="/politcs" linkName="Politics" />
               <MobileNavLink link="/sports" linkName="Sports" />
               <MobileNavLink link="/technology" linkName="Technology" />
+              <MobileNavLink link="/travel" linkName="Travel" />
+              <MobileNavLink link="/trending" linkName="Trending" />
             </ul>
           </div>
 
@@ -38,8 +40,7 @@ const MobileNavigation = () => {
           <div className="mobile-links">
             <ul className="mobile-links__list">
               <MobileNavLink link="/privacy-policy" linkName="Privacy Policy" />
-              <MobileNavLink link="/terms-&amp;-conditions" linkName="Terms & Conditions" />
-              <MobileNavLink link="/third-party-libraries" linkName="Third Party Libraries" />
+              <MobileNavLink link="/terms-&amp;-conditions" linkName="Terms &amp; Conditions" />
             </ul>
           </div>
 
