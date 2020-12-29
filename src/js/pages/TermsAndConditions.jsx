@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+import disabled from "../Disabled";
 
 const TermsAndConditions = () => {
+  useEffect(() => {
+    disabled()
+  }, []);
+
   return (
     <section id="terms-and-conditions">
       <div className="container-fluid">

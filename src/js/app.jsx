@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Switch, Route } from "react-router-dom";
 
 import ScrollToTop from "./ScrollToTop";
@@ -6,15 +6,17 @@ import PageTitle from "./PageTitle";
 
 import Header from "./Header";
 import MobileNavigation from "./MobileNavigation";
-import TodaysHeadlines from "./Headlines";
-import Trending from "./pages/Trending";
-import Business from "./pages/Business";
-import Footer from "./Footer";
 
+import TodaysHeadlines from "./Headlines";
+import Business from "./pages/Business";
+import COVID19 from "./pages/COVID-19";
+import Politics from "./pages/Politics";
+import Sports from "./pages/Sports";
+import Trending from "./pages/Trending";
+
+import Footer from "./Footer";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
-
-import Disabled from "./Disabled";
 
 const App = () => {
   return (
@@ -48,6 +50,28 @@ const App = () => {
         />
 
         <Route
+          path="/covid-19"
+          component={(props) => {
+            return (
+              <PageTitle title="GENEWS | COVID-19">
+                <COVID19 {...props} />
+              </PageTitle>
+            );
+          }}
+        />
+
+        <Route
+          path="/politics"
+          component={(props) => {
+            return (
+              <PageTitle title="GENEWS | Politics">
+                <Politics {...props} />
+              </PageTitle>
+            );
+          }}
+        />
+
+        <Route
           path="/trending"
           component={(props) => {
             return (
@@ -61,8 +85,6 @@ const App = () => {
         <Route
           path="/privacy-policy"
           component={(props) => {
-            Disabled();
-
             return (
               <PageTitle title="GENEWS | Privacy Policy">
                 <PrivacyPolicy {...props} />
@@ -74,8 +96,6 @@ const App = () => {
         <Route
           path="/terms-&amp;-conditions"
           component={(props) => {
-            Disabled();
-
             return (
               <PageTitle title="GENEWS | Terms &amp; Conditions">
                 <TermsAndConditions {...props} />

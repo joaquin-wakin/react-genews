@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+import disabled from "../Disabled";
 
 const PrivacyPolicy = () => {
+  useEffect(() => {
+    disabled();
+  }, []);
+
   return (
     <section id="privacy-policy">
       <div className="container-fluid">
