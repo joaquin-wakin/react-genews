@@ -28,7 +28,7 @@ const MobileNavigation = () => {
               <MobileNavLink link="/business" linkName="Business" />
               <MobileNavLink link="/covid-19" linkName="COVID-19" />
               <MobileNavLink link="/future" linkName="Future" />
-              <MobileNavLink link="/politcs" linkName="Politics" />
+              <MobileNavLink link="/politics" linkName="Politics" />
               <MobileNavLink link="/sports" linkName="Sports" />
               <MobileNavLink link="/technology" linkName="Technology" />
               <MobileNavLink link="/travel" linkName="Travel" />
