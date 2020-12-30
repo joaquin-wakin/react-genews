@@ -12,6 +12,8 @@ import Business from "./pages/Business";
 import COVID19 from "./pages/COVID-19";
 import Politics from "./pages/Politics";
 import Sports from "./pages/Sports";
+import Technology from "./pages/Technology";
+import Travel from "./pages/Travel";
 import Trending from "./pages/Trending";
 
 import Footer from "./Footer";
@@ -77,6 +79,28 @@ const App = () => {
             return (
               <PageTitle title="GENEWS | Sports">
                 <Sports {...props} />
+              </PageTitle>
+            );
+          }}
+        />
+
+        <Route
+          path="/technology"
+          component={(props) => {
+            return (
+              <PageTitle title="GENEWS | Technology">
+                <Technology {...props} />
+              </PageTitle>
+            );
+          }}
+        />
+
+        <Route
+          path="/travel"
+          component={(props) => {
+            return (
+              <PageTitle title="GENEWS | Travel">
+                <Travel {...props} />
               </PageTitle>
             );
           }}

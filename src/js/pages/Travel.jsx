@@ -6,15 +6,15 @@ import disabled from "../Disabled";
 
 import LoadingAnimation from "../LoadingAnimation";
 
-const Trending = () => {
-  const [trending, setTrending] = useState([]);
+const Travel = () => {
+  const [travel, setTravel] = useState([]);
 
-  const fetchTrending = async () => {
+  const fetchTravel = async () => {
     $(".loading-spinner__container").addClass("display");
 
-    const category = "popular";
+    const category = "travel";
 
-    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=${category}&skip=21&limit=21&from=2020-11-30&langs=en`, {
+    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=${category}&skip=1&limit=21&from=2020-12-1&langs=en,ph`, {
       method: "GET",
       headers: {
         "x-rapidapi-key": "734c8025e8msh3008a9e94311a28p13ee78jsn4f7e98ac6131",
@@ -24,38 +24,38 @@ const Trending = () => {
 
     const response = await data.json();
     document.cookie = "SameSite=None; Secure";
-    setTrending(response.news);
+    setTravel(response.news);
 
     $(".loading-spinner__container").removeClass("display");
   };
 
   useEffect(() => {
     disabled();
-    fetchTrending();
+    fetchTravel();
   }, []);
 
   return (
-    <section id="trending">
+    <section id="technology">
       <div className="container-fluid">
-        <h1 className="page-heading">Trending</h1>
+        <h1 className="page-heading">Travel</h1>
 
-        <LoadingAnimation text="Getting latest trending news..." />
+        <LoadingAnimation text="Getting news about travel..." />
 
         <div className="grid">
-          {trending.map((trending) => {
+          {travel.map((travel) => {
             return (
-              <div className="grid-col" key={`${trending._id}`}>
+              <div className="grid-col" key={`${travel._id}`}>
                 <div className="headline-article__container">
                   <div className="headline-article__header">
-                    <img src={`${trending.image}`} alt="" />
+                    <img src={`${travel.image}`} alt="" />
                   </div>
 
                   <div className="headline-article__body">
-                    <h1 className="headline-article__heading">{trending.title}</h1>
-                    <p className="headline-article__description">{trending.description}</p>
+                    <h1 className="headline-article__heading">{travel.title}</h1>
+                    <p className="headline-article__description">{travel.description}</p>
 
                     <div className="headline-article-link__container">
-                      <a href={`${trending.url}`} className="headline-article-link__link" target="_blank">
+                      <a href={`${travel.url}`} className="headline-article-link__link" target="_blank">
                         Read more
                       </a>
                     </div>
@@ -70,4 +70,4 @@ const Trending = () => {
   );
 };
 
-export default Trending;
+export default Travel;
