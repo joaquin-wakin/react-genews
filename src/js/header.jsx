@@ -26,7 +26,6 @@ const NavMenu = () => {
         <NavLink link="/" linkName="Today's Headlines" />
         <NavLink link="/business" linkName="Business" />
         <NavLink link="/covid-19" linkName="COVID-19" />
-        <NavLink link="/future" linkName="Future" />
         <NavLink link="/politics" linkName="Politics" />
         <NavLink link="/sports" linkName="Sports" />
         <NavLink link="/technology" linkName="Technology" />

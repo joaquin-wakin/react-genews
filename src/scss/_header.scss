@@ -67,44 +67,6 @@ header {
   }
 }
 
-.search-form__container {
-  display: none;
-  margin-left: auto;
-}
-
-.input-container {
-  align-items: center;
-  background-color: $white-color;
-  border-radius: 0.5rem;
-  display: flex;
-  padding: 0.75rem;
-}
-
-.search-icon {
-  color: $black-color;
-  font-size: 1.25rem;
-  margin-right: 0.75rem;
-}
-
-.search-input {
-  background-color: $white-color;
-  border: none;
-  display: block;
-  font-size: $base-size;
-  outline: none;
-  width: 100%;
-
-  &::placeholder {
-    color: rgba($black-color, 0.5);
-    font-weight: 400;
-  }
-
-  &::selection {
-    background-color: $primary-color;
-    color: $white-color;
-  }
-}
-
 .mobile-nav-hamburger {
   .hamburger-icon {
     color: $white-color;
@@ -112,12 +74,8 @@ header {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .nav-menu__container {
-    display: block;
-  }
-
-  .search-form__container {
     display: block;
   }
 

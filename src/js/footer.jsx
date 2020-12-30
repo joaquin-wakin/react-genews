@@ -18,7 +18,6 @@ const Footer = () => {
               <FooterLink link="/" linkName="Today's Headlines" />
               <FooterLink link="/business" linkName="Business" />
               <FooterLink link="/covid-19" linkName="COVID-19" />
-              <FooterLink link="/future" linkName="Future" />
               <FooterLink link="/politics" linkName="Politics" />
               <FooterLink link="/sports" linkName="Sports" />
               <FooterLink link="/technology" linkName="Technology" />

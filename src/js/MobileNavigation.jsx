@@ -1,14 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import $ from "jquery";
 
 function CloseMenu() {
-  $("body").removeClass("disabled-scroll");
   $("#mobile-navigation").removeClass("active");
   $("#overlay").removeClass("active");
 }
 
+function displayNone() {
+  $(window).on("resize", function () {
+    if ($(window).width() > 992) {
+      $("#mobile-navigation").removeClass("active");
+      $("#overlay").removeClass("active");
+    } else {
+      $("#mobile-navigation").addClass("active");
+      $("#overlay").addClass("active");
+    }
+  });
+}
+
 const MobileNavigation = () => {
+  useEffect(() => {
+    displayNone();
+  }, []);
+
   return (
     <>
       <nav id="mobile-navigation">
@@ -27,7 +42,6 @@ const MobileNavigation = () => {
               <MobileNavLink link="/" linkName="Today's Headlines" />
               <MobileNavLink link="/business" linkName="Business" />
               <MobileNavLink link="/covid-19" linkName="COVID-19" />
-              <MobileNavLink link="/future" linkName="Future" />
               <MobileNavLink link="/politics" linkName="Politics" />
               <MobileNavLink link="/sports" linkName="Sports" />
               <MobileNavLink link="/technology" linkName="Technology" />
@@ -52,34 +66,6 @@ const MobileNavigation = () => {
 
       <div id="overlay"></div>
     </>
-  );
-};
-
-const MobileSearchBar = () => {
-  function submitSearchInput(event) {
-    event.preventDefault();
-    const userInput = $(".search-bar__input").val();
-
-    if (userInput == 0) {
-      return false;
-    } else {
-      console.log(userInput);
-      $(".search-bar__input").val("");
-      CloseMenu();
-    }
-  }
-
-  return (
-    <div id="mobile-search-bar__contianer">
-      <div className="search-bar__container">
-        <form className="search-bar__form" onSubmit={submitSearchInput}>
-          <div className="search-bar-input__container">
-            <i className="bx bx-search search-icon"></i>
-            <input type="text" className="search-bar__input" placeholder="Search" />
-          </div>
-        </form>
-      </div>
-    </div>
   );
 };
 

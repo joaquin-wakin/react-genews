@@ -11,13 +11,14 @@ footer {
 }
 
 .footer-sub-heading {
-  color: rgba($white-color, 0.75);
+  color: $white-color;
   font-size: 1.25rem;
   font-weight: 400;
 }
 
 .footer-description {
   color: rgba($white-color, 0.5);
+  font-size: $smallest-size;
 }
 
 .footer-heading__other {
@@ -51,6 +52,7 @@ footer {
 
 .copyright {
   color: $white-color;
+  font-size: $smallest-size;
   text-align: left;
 }
 

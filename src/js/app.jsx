@@ -72,6 +72,17 @@ const App = () => {
         />
 
         <Route
+          path="/sports"
+          component={(props) => {
+            return (
+              <PageTitle title="GENEWS | Sports">
+                <Sports {...props} />
+              </PageTitle>
+            );
+          }}
+        />
+
+        <Route
           path="/trending"
           component={(props) => {
             return (
