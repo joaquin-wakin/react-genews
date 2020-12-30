@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import $ from "jquery";
 
 function CloseMenu() {
+  $("body").removeClass("disabled-scroll");
   $("#mobile-navigation").removeClass("active");
   $("#overlay").removeClass("active");
 }
@@ -10,6 +11,7 @@ function CloseMenu() {
 function displayNone() {
   $(window).on("resize", function () {
     if ($(window).width() > 992) {
+      $("body").removeClass("disabled-scroll");
       $("#mobile-navigation").removeClass("active");
       $("#overlay").removeClass("active");
     }
