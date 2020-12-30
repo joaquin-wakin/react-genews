@@ -12,9 +12,6 @@ function displayNone() {
     if ($(window).width() > 992) {
       $("#mobile-navigation").removeClass("active");
       $("#overlay").removeClass("active");
-    } else {
-      $("#mobile-navigation").addClass("active");
-      $("#overlay").addClass("active");
     }
   });
 }
@@ -32,8 +29,6 @@ const MobileNavigation = () => {
             <i className="bx bx-arrow-back" onClick={CloseMenu}></i>
             <h1 className="mobile-nav__heading">Genews</h1>
           </div>
-
-          {/* <MobileSearchBar /> */}
 
           <h3 className="mobile-nav__text">Categories</h3>
 
