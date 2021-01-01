@@ -12,9 +12,7 @@ const Trending = () => {
   const fetchTrending = async () => {
     $(".loading-spinner__container").addClass("display");
 
-    const category = "popular";
-
-    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=${category}&skip=21&limit=21&from=2020-11-30&langs=en`, {
+    const data = await fetch("https://news67.p.rapidapi.com/trending?limit=21&skip=1&langs=en", {
       method: "GET",
       headers: {
         "x-rapidapi-key": "734c8025e8msh3008a9e94311a28p13ee78jsn4f7e98ac6131",
@@ -23,8 +21,9 @@ const Trending = () => {
     });
 
     const response = await data.json();
-    document.cookie = "SameSite=None; Secure";
-    setTrending(response.news);
+    setTrending(response);
+
+    document.cookie = "SameSite=None;Secure";
 
     $(".loading-spinner__container").removeClass("display");
   };
@@ -44,7 +43,7 @@ const Trending = () => {
         <div className="grid">
           {trending.map((trending) => {
             return (
-              <div className="grid-col" key={`${trending._id}`}>
+              <div className="grid-col" key={`${trending.id}`}>
                 <div className="headline-article__container">
                   <div className="headline-article__header">
                     <img src={`${trending.image}`} alt="" />

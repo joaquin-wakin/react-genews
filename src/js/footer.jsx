@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="col-3__small col-6__medium col-3__large">
             <h1 className="footer-heading__other">Categories</h1>
             <ul className="menu-list">
-              <FooterLink link="/" linkName="Today's Headlines" />
+              <FooterLink link="/" linkName="Today&apos;s Headlines" />
               <FooterLink link="/business" linkName="Business" />
               <FooterLink link="/covid-19" linkName="COVID-19" />
               <FooterLink link="/politics" linkName="Politics" />
@@ -34,13 +34,13 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="col-3__small col-6__medium col-3__large">
+          {/* <div className="col-3__small col-6__medium col-3__large">
             <h1 className="footer-heading__other">About</h1>
             <p className="footer-sub-heading__other">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, distinctio. Laborum facere quam iste molestiae cum fugiat porro tenetur expedita, esse optio
               saepe debitis impedit quod, amet sint vel molestias.
             </p>
-          </div>
+          </div> */}
         </div>
 
         <p className="copyright">&copy; 2020 GENEWS | Get the latest news. All Rights Reserved</p>
