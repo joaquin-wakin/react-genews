@@ -4,7 +4,7 @@ import disabled from "../Disabled";
 
 const TermsAndConditions = () => {
   useEffect(() => {
-    disabled()
+    disabled();
   }, []);
 
   return (
@@ -81,7 +81,7 @@ const TermsAndConditions = () => {
 
         <h3 className="section-heading">User Representations</h3>
         <p className="terms-and-conditions-paragraph">By using the site, you represent and warrant that:</p>
-        <ol className="privacy-policy-list">
+        <ol className="terms-and-conditions-list">
           <li>All registration information you submit will be true, accurate, current, and complete;</li>
           <li>You will maintain the accuracy of such information and promptly update such registration information as necessary;</li>
           <li>You have the legal capacity and you agree to comply with these Terms and Conditions;</li>
@@ -117,13 +117,59 @@ const TermsAndConditions = () => {
 
           <li>Engage in unauthorized framing of or linking to the site;</li>
 
+          <li>Trick, defraud, or mislead us and other users, especially in any attempt to learn sensitive account information such as user passwords;</li>
+
+          <li>Make improper use of our support services or submit false reports of abuse or misconduct;</li>
           <li>
             Engage in any automated use of the system, such as using scripts to send comments or messages, or using any data mining, robots, or similar data gathering and
             extraction tools;
           </li>
 
           <li>Interfere with, disrupt, or create an undue burden on the site or the networks or services connected to the site;</li>
+          <li>Attempt to impersonate another user or person or use the username of another user;</li>
+          <li>Sell or otherwise transfer your profile;</li>
+          <li>Use any information obtained from the site in order to harass, abuse, or harm another person;</li>
+          <li>
+            Use the site as part of any effort to compete with us or otherwise use the site and/or the content for any revenue-generating endeavor or commercial enterprise;
+          </li>
+
+          <li>Decipher, decompile, disassemble, or reverse engineer any of the software comprising or in any way making up a part of the site;</li>
+          <li>Attempt to bypass any measures of the site designed to prevent or restrict access to the site, or any portion of the site;</li>
+          <li>Harass, annoy, intimidate, or threaten any of our employees or agents engaged in providing any portion of the site to you;</li>
+          <li>Delete the copyright or other proprietary rights notice from any content;</li>
+          <li>Copy or adapt the site’s software, including but not limited to Flash, PHP, HTML, JavaScript, or other code;</li>
+          <li>
+            Upload or transmit (or attempt to upload or to transmit) viruses, Trojan horses, or other material, including excessive use of capital letters and spamming
+            (continuous posting of repetitive text), that interferes with any party's uninterrupted use and enjoyment of the site or modifies, impairs, disrupts, alters, or
+            interferes with the use, features, functions, operation, or maintenance of the site;
+          </li>
+
+          <li>
+            Upload or transmit (or attempt to upload or to transmit) any material that acts as a passive or active information collection or transmission mechanism, including
+            without limitation, clear graphics interchange formats ("gifs"), 1 x 1 pixels, web bugs, cookies, or other similar devices (sometimes referred to as "spyware" or
+            "passive collection mechanisms" or "pcms");
+          </li>
+
+          <li>
+            Except as may be the result of standard search engine or internet browser usage, use, launch, develop, or distribute any automated system, including without
+            limitation, any spider, robot, cheat utility, scraper, or offline reader that accesses the site, or using or launching any unauthorized script or other software;
+          </li>
+
+          <li>Disparage, tarnish, or otherwise harm, in our opinion, us and/or the site;</li>
+          <li>Use the Site in a manner inconsistent with any applicable laws or regulations.</li>
         </ol>
+
+        <h3 className="section-heading">User Generated Contributions</h3>
+        <p className="terms-and-conditions-paragraph">
+          The site may invite you to chat, contribute to, or participate in blogs, message boards, online forums, and other functionality, and may provide you with the
+          opportunity to create, submit, post, display, transmit, perform, publish, distribute, or broadcast content and materials to us or on the site, including but not
+          limited to text, writings, video, audio, photographs, graphics, comments, suggestions, or personal information or other material (collectively, "contributions").
+        </p>
+
+        <p className="terms-and-conditions-paragraph">
+          Contributions may be viewable by other users of the site and through third-party websites. As such, any contributions you transmit may be treated as non-confidential
+          and non-proprietary. When you create or make available any contributions, you thereby represent and warrant that:
+        </p>
       </div>
     </section>
   );

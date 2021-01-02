@@ -20,6 +20,8 @@ import Footer from "./Footer";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 
+import PageNotFound from "./pages/PageNotFound";
+
 const App = () => {
   return (
     <>
@@ -41,6 +43,7 @@ const App = () => {
         />
 
         <Route
+          exact
           path="/business"
           component={(props) => {
             return (
@@ -52,6 +55,7 @@ const App = () => {
         />
 
         <Route
+          exact
           path="/covid-19"
           component={(props) => {
             return (
@@ -63,6 +67,7 @@ const App = () => {
         />
 
         <Route
+          exact
           path="/politics"
           component={(props) => {
             return (
@@ -74,6 +79,7 @@ const App = () => {
         />
 
         <Route
+          exact
           path="/sports"
           component={(props) => {
             return (
@@ -85,6 +91,7 @@ const App = () => {
         />
 
         <Route
+          exact
           path="/technology"
           component={(props) => {
             return (
@@ -96,6 +103,7 @@ const App = () => {
         />
 
         <Route
+          exact
           path="/travel"
           component={(props) => {
             return (
@@ -107,6 +115,7 @@ const App = () => {
         />
 
         <Route
+          exact
           path="/trending"
           component={(props) => {
             return (
@@ -118,6 +127,7 @@ const App = () => {
         />
 
         <Route
+          exact
           path="/privacy-policy"
           component={(props) => {
             return (
@@ -129,11 +139,24 @@ const App = () => {
         />
 
         <Route
+          exact
           path="/terms-&amp;-conditions"
           component={(props) => {
             return (
               <PageTitle title="GENEWS | Terms &amp; Conditions">
                 <TermsAndConditions {...props} />
+              </PageTitle>
+            );
+          }}
+        />
+
+        <Route
+          exact
+          path="/*"
+          component={(props) => {
+            return (
+              <PageTitle title="GENEWS | Page not found">
+                <PageNotFound {...props} />
               </PageTitle>
             );
           }}

@@ -46,19 +46,6 @@ const NavLink = (props) => {
   );
 };
 
-const SearchForm = () => {
-  return (
-    <div className="search-form__container">
-      <form className="search-form__form search-form">
-        <div className="input-container">
-          <i className="bx bx-search search-icon"></i>
-          <input type="text" className="search-input" placeholder="Search" />
-        </div>
-      </form>
-    </div>
-  );
-};
-
 const MobileNavHamburger = () => {
   function SlideMenu() {
     $("body").addClass("disabled-scroll");

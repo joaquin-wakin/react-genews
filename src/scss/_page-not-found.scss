@@ -1,0 +1,38 @@
+#page-not-found {
+  background-color: $white;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+
+  .container-fluid {
+    i {
+      color: rgba($black-color, 0.75);
+      display: block;
+      font-size: 5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    p {
+      color: rgba($black-color, 0.75);
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+.reload-button__container {
+  display: flex;
+  justify-content: center;
+
+  a {
+    background-color: $black-color;
+    border-radius: 0.5rem;
+    color: $white-color;
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+}
