@@ -12,7 +12,7 @@ const Business = () => {
   const fetchBusiness = async () => {
     $(".loading-spinner__container").addClass("display");
 
-    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=digital%20marketing&skip=1&limit=21&from=2020-12-25&langs=en`, {
+    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=digital%20marketing&skip=21&limit=21&from=2020-12-25&langs=en`, {
       method: "GET",
       headers: {
         "x-rapidapi-key": "734c8025e8msh3008a9e94311a28p13ee78jsn4f7e98ac6131",

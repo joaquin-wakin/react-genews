@@ -2,12 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import $ from "jquery";
 
+import favicon from "./favicon-white.png";
+
 const Header = () => {
   return (
     <header>
       <nav className="nav-container">
         <div className="container-fluid">
           <a href="/" className="nav-logo">
+            <img src={`${favicon}`} alt="GENEWS' Logo.png" />
             Genews
           </a>
 

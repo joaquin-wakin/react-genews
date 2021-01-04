@@ -1,13 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import favicon from "./favicon-white.png";
+
 const Footer = () => {
   return (
     <footer>
       <div className="container-fluid">
         <div className="row">
           <div className="col-4__small col-6__medium col-4__large">
-            <h1 className="footer-heading">Genews</h1>
+            <h1 className="footer-heading">
+              <img src={`${favicon}`} alt="GENEWS' Logo.png" />
+              Genews
+            </h1>
             <h3 className="footer-sub-heading">Get the latest news</h3>
             <p className="footer-description">Access the latest trends, news about COVID-19, technology, and more within your device without any hassle.</p>
           </div>
@@ -15,7 +20,7 @@ const Footer = () => {
           <div className="col-3__small col-6__medium col-3__large">
             <h1 className="footer-heading__other">Categories</h1>
             <ul className="menu-list">
-              <FooterLink link="/" linkName="Today&apos;s Headlines" />
+              <FooterLink link="/" linkName="Today's Headlines" />
               <FooterLink link="/business" linkName="Business" />
               <FooterLink link="/covid-19" linkName="COVID-19" />
               <FooterLink link="/politics" linkName="Politics" />
@@ -33,14 +38,6 @@ const Footer = () => {
               <FooterLink link="/terms-&amp;-conditions" linkName="Terms &amp; Conditions" />
             </ul>
           </div>
-
-          {/* <div className="col-3__small col-6__medium col-3__large">
-            <h1 className="footer-heading__other">About</h1>
-            <p className="footer-sub-heading__other">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, distinctio. Laborum facere quam iste molestiae cum fugiat porro tenetur expedita, esse optio
-              saepe debitis impedit quod, amet sint vel molestias.
-            </p>
-          </div> */}
         </div>
 
         <p className="copyright">&copy; 2020 GENEWS | Get the latest news. All Rights Reserved</p>

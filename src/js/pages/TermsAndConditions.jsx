@@ -158,18 +158,6 @@ const TermsAndConditions = () => {
           <li>Disparage, tarnish, or otherwise harm, in our opinion, us and/or the site;</li>
           <li>Use the Site in a manner inconsistent with any applicable laws or regulations.</li>
         </ol>
-
-        <h3 className="section-heading">User Generated Contributions</h3>
-        <p className="terms-and-conditions-paragraph">
-          The site may invite you to chat, contribute to, or participate in blogs, message boards, online forums, and other functionality, and may provide you with the
-          opportunity to create, submit, post, display, transmit, perform, publish, distribute, or broadcast content and materials to us or on the site, including but not
-          limited to text, writings, video, audio, photographs, graphics, comments, suggestions, or personal information or other material (collectively, "contributions").
-        </p>
-
-        <p className="terms-and-conditions-paragraph">
-          Contributions may be viewable by other users of the site and through third-party websites. As such, any contributions you transmit may be treated as non-confidential
-          and non-proprietary. When you create or make available any contributions, you thereby represent and warrant that:
-        </p>
       </div>
     </section>
   );
