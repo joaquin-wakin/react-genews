@@ -40,7 +40,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <p className="copyright">&copy; 2020 GENEWS | Get the latest news. All Rights Reserved</p>
+        <p className="copyright">&copy; 2021 GENEWS | Get the latest news. All Rights Reserved</p>
       </div>
     </footer>
   );

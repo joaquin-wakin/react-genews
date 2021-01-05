@@ -56,7 +56,7 @@ const MobileNavigation = () => {
           </div>
 
           <div id="copyrights">
-            <p>&copy; 2020 GENEWS | Get the latest news. All Rights Reserved</p>
+            <p>&copy; 2021 GENEWS | Get the latest news. All Rights Reserved</p>
           </div>
         </div>
       </nav>
