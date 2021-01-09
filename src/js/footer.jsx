@@ -34,7 +34,7 @@ const Footer = () => {
           <div className="col-4__small col-6__medium col-4__large">
             <h1 className="footer-heading__other">Contact Us</h1>
             <div>
-              <form className="contact-us__form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+              <form className="contact-us__form" data-netlify="true" data-netlify-honeypot="bot-field" method="POST">
                 <input type="hidden" name="form-name" value="contact-us" />
 
                 <div className="input-container">
