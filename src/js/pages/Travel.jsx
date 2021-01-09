@@ -12,9 +12,7 @@ const Travel = () => {
   const fetchTravel = async () => {
     $(".loading-spinner__container").addClass("display");
 
-    const category = "travel";
-
-    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=${category}&skip=1&limit=21&from=2020-12-1&langs=en,ph`, {
+    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=travel&skip=1&limit=21&from=2021-01-08&langs=en,ph`, {
       method: "GET",
       headers: {
         "x-rapidapi-key": "734c8025e8msh3008a9e94311a28p13ee78jsn4f7e98ac6131",
@@ -22,8 +20,8 @@ const Travel = () => {
       },
     });
 
-    const response = await data.json();
     document.cookie = "SameSite=None; Secure";
+    const response = await data.json();
     setTravel(response.news);
 
     $(".loading-spinner__container").removeClass("display");
@@ -52,7 +50,18 @@ const Travel = () => {
 
                   <div className="headline-article__body">
                     <h1 className="headline-article__heading">{travel.title}</h1>
-                    <p className="headline-article__description">{travel.description}</p>
+                    <p className="source-name">
+                      Source:{" "}
+                      <a href={`${travel.url}`} target="_blank">
+                        {travel.source}
+                      </a>
+                    </p>
+
+                    <p className="published-date">
+                      Published at <b>{new Date(travel.elabDate).toLocaleString()}</b>
+                    </p>
+
+                    <p className="headline-article__description">{travel.summarization}</p>
 
                     <div className="headline-article-link__container">
                       <a href={`${travel.url}`} className="headline-article-link__link" target="_blank">

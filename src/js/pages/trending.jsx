@@ -12,7 +12,7 @@ const Trending = () => {
   const fetchTrending = async () => {
     $(".loading-spinner__container").addClass("display");
 
-    const data = await fetch("https://news67.p.rapidapi.com/trending?limit=21&skip=1&langs=en", {
+    const data = await fetch("https://news67.p.rapidapi.com/trending?limit=21&skip=21&langs=en", {
       method: "GET",
       headers: {
         "x-rapidapi-key": "734c8025e8msh3008a9e94311a28p13ee78jsn4f7e98ac6131",
@@ -20,10 +20,9 @@ const Trending = () => {
       },
     });
 
+    document.cookie = "SameSite=None;Secure";
     const response = await data.json();
     setTrending(response);
-
-    document.cookie = "SameSite=None;Secure";
 
     $(".loading-spinner__container").removeClass("display");
   };
@@ -51,7 +50,18 @@ const Trending = () => {
 
                   <div className="headline-article__body">
                     <h1 className="headline-article__heading">{trending.title}</h1>
-                    <p className="headline-article__description">{trending.description}</p>
+                    <p className="source-name">
+                      Source:{" "}
+                      <a href={`${trending.url}`} target="_blank">
+                        {trending.source}
+                      </a>
+                    </p>
+
+                    <p className="published-date">
+                      Published at <b>{new Date(trending.publishedDate).toLocaleString()}</b>
+                    </p>
+
+                    <p className="headline-article__description">{trending.summarization}</p>
 
                     <div className="headline-article-link__container">
                       <a href={`${trending.url}`} className="headline-article-link__link" target="_blank">

@@ -17,7 +17,7 @@ const Footer = () => {
             <p className="footer-description">Access the latest trends, news about COVID-19, technology, and more within your device without any hassle.</p>
           </div>
 
-          <div className="col-3__small col-6__medium col-3__large">
+          <div className="col-4__small col-6__medium col-4__large">
             <h1 className="footer-heading__other">Categories</h1>
             <ul className="menu-list">
               <FooterLink link="/" linkName="Today's Headlines" />
@@ -31,12 +31,34 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="col-3__small col-6__medium col-3__large">
-            <h1 className="footer-heading__other">Information</h1>
-            <ul className="menu-list">
-              <FooterLink link="/privacy-policy" linkName="Privacy Policy" />
-              <FooterLink link="/terms-&amp;-conditions" linkName="Terms &amp; Conditions" />
-            </ul>
+          <div className="col-4__small col-6__medium col-4__large">
+            <h1 className="footer-heading__other">Contact Us</h1>
+            <div>
+              <form className="contact-us__form" data-netlify="true">
+                <div className="input-container">
+                  <i class="bx bx-user"></i>
+                  <input type="text" className="input-input" name="username" placeholder="Username" required />
+                </div>
+
+                <div className="input-container">
+                  <i class="bx bx-envelope"></i>
+                  <input type="email" className="input-input" name="email" placeholder="E-mail" required />
+                </div>
+
+                <div className="input-container">
+                  <i class="bx bx-tag-alt"></i>
+                  <input type="text" className="input-input" name="subject" placeholder="Subject" required />
+                </div>
+
+                <div className="input-container">
+                  <textarea className="input-input" name="message" placeholder="Type a message..." rows="8" required></textarea>
+                </div>
+
+                <button type="submit" className="send-button">
+                  Send message
+                </button>
+              </form>
+            </div>
           </div>
         </div>
 

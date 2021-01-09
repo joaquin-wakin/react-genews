@@ -12,7 +12,7 @@ function COVID19() {
   const fetchCOVID19 = async () => {
     $(".loading-spinner__container").addClass("display");
 
-    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=coronavirus&skip=42&limit=21&from=2020-12-25&langs=en`, {
+    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=coronavirus&skip=42&limit=21&from=2021-01-08&langs=en`, {
       method: "GET",
       headers: {
         "x-rapidapi-key": "734c8025e8msh3008a9e94311a28p13ee78jsn4f7e98ac6131",
@@ -50,7 +50,18 @@ function COVID19() {
 
                   <div className="headline-article__body">
                     <h1 className="headline-article__heading">{covid19.title}</h1>
-                    <p className="headline-article__description">{covid19.description}</p>
+                    <p className="source-name">
+                      Source:{" "}
+                      <a href={`${covid19.url}`} target="_blank">
+                        {covid19.source}
+                      </a>
+                    </p>
+
+                    <p className="published-date">
+                      Published at <b>{new Date(covid19.elabDate).toLocaleString()}</b>
+                    </p>
+
+                    <p className="headline-article__description">{covid19.summarization}</p>
 
                     <div className="headline-article-link__container">
                       <a href={`${covid19.url}`} className="headline-article-link__link" target="_blank">

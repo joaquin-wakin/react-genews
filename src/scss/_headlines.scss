@@ -72,13 +72,13 @@
   font-size: $title-size;
 }
 
-.headline-article__heading,
-.headline-article__description {
-  user-select: text;
+.source-name {
+  a {
+    color: $primary-color;
 
-  &::selection {
-    background-color: $secondary-color;
-    color: $white-color;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 

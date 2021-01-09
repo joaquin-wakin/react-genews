@@ -47,13 +47,13 @@ const MobileNavigation = () => {
             </ul>
           </div>
 
-          <h3 className="mobile-nav__text">Information</h3>
+          {/* <h3 className="mobile-nav__text">Information</h3>
           <div className="mobile-links">
             <ul className="mobile-links__list">
               <MobileNavLink link="/privacy-policy" linkName="Privacy Policy" />
               <MobileNavLink link="/terms-&amp;-conditions" linkName="Terms &amp; Conditions" />
             </ul>
-          </div>
+          </div> */}
 
           <div id="copyrights">
             <p>&copy; 2021 GENEWS | Get the latest news. All Rights Reserved</p>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import $ from "jquery";
 import "regenerator-runtime/runtime";
 
-import disabled from "../Disabled";
+import Disabled from "../Disabled";
 
 import LoadingAnimation from "../LoadingAnimation";
 
@@ -12,7 +12,7 @@ const Business = () => {
   const fetchBusiness = async () => {
     $(".loading-spinner__container").addClass("display");
 
-    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=digital%20marketing&skip=21&limit=21&from=2020-12-25&langs=en`, {
+    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=business&skip=21&limit=21&from=2021-01-08&langs=en`, {
       method: "GET",
       headers: {
         "x-rapidapi-key": "734c8025e8msh3008a9e94311a28p13ee78jsn4f7e98ac6131",
@@ -21,14 +21,14 @@ const Business = () => {
     });
 
     const response = await data.json();
-    document.cookie = "SameSite=None; Secure";
     setBusiness(response.news);
+    document.cookie = "SameSite=None; Secure";
 
     $(".loading-spinner__container").removeClass("display");
   };
 
   useEffect(() => {
-    disabled();
+    Disabled();
     fetchBusiness();
   }, []);
 
@@ -50,7 +50,18 @@ const Business = () => {
 
                   <div className="headline-article__body">
                     <h1 className="headline-article__heading">{business.title}</h1>
-                    <p className="headline-article__description">{business.description}</p>
+                    <p className="source-name">
+                      Source:{" "}
+                      <a href={`${business.url}`} target="_blank">
+                        {business.source}
+                      </a>
+                    </p>
+
+                    <p className="published-date">
+                      Published at <b>{new Date(business.elabDate).toLocaleString()}</b>
+                    </p>
+
+                    <p className="headline-article__description">{business.summarization}</p>
 
                     <div className="headline-article-link__container">
                       <a href={`${business.url}`} className="headline-article-link__link" target="_blank">

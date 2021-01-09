@@ -14,7 +14,7 @@ const Sports = () => {
 
     const category = "basketball,football,soccer,swimming,volleyball";
 
-    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=${category}&skip=21&limit=21&from=2020-12-1&langs=en,ph`, {
+    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=${category}&skip=21&limit=21&from=2021-01-08&langs=en,ph`, {
       method: "GET",
       headers: {
         "x-rapidapi-key": "734c8025e8msh3008a9e94311a28p13ee78jsn4f7e98ac6131",
@@ -23,8 +23,8 @@ const Sports = () => {
     });
 
     const response = await data.json();
-    document.cookie = "SameSite=None; Secure";
     setSports(response.news);
+    document.cookie = "SameSite=None; Secure";
 
     $(".loading-spinner__container").removeClass("display");
   };
@@ -52,7 +52,18 @@ const Sports = () => {
 
                   <div className="headline-article__body">
                     <h1 className="headline-article__heading">{sports.title}</h1>
-                    <p className="headline-article__description">{sports.description}</p>
+                    <p className="source-name">
+                      Source:{" "}
+                      <a href={`${sports.url}`} target="_blank">
+                        {sports.source}
+                      </a>
+                    </p>
+
+                    <p className="published-date">
+                      Published at <b>{new Date(sports.elabDate).toLocaleString()}</b>
+                    </p>
+
+                    <p className="headline-article__description">{sports.summarization}</p>
 
                     <div className="headline-article-link__container">
                       <a href={`${sports.url}`} className="headline-article-link__link" target="_blank">

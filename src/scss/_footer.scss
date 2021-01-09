@@ -1,5 +1,5 @@
 footer {
-  background-color: $black-color;
+  background-color: $black;
   padding-bottom: 3rem;
   padding-top: 3rem;
 }
@@ -54,6 +54,59 @@ footer {
     &:hover {
       color: $white-color;
     }
+  }
+}
+
+.contact-us__form {
+  .input-container {
+    align-items: center;
+    background-color: $black-color;
+    border-radius: 0.5rem;
+    display: flex;
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+    .bx {
+      color: rgba($white, 0.5);
+      font-size: 1.5rem;
+      margin-right: 1rem;
+    }
+
+    .input-input {
+      background: transparent;
+      border: none;
+      color: $white;
+      display: block;
+      font-size: $base-size;
+      font-weight: 400;
+      height: 100%;
+      outline: none;
+      width: 100%;
+
+      &::placeholder {
+        color: rgba($white, 0.5);
+      }
+
+      &::selection {
+        background-color: $primary-color;
+        color: $white;
+      }
+    }
+  }
+
+  .send-button {
+    background-color: $primary-color;
+    border-radius: 0.5rem;
+    border: none;
+    color: $white;
+    cursor: pointer;
+    display: block;
+    font-size: $base-size;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    outline: none;
+    padding: 1rem;
+    width: 100%;
   }
 }
 

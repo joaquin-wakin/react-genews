@@ -12,9 +12,9 @@ const Technology = () => {
   const fetchTechnology = async () => {
     $(".loading-spinner__container").addClass("display");
 
-    const category = "technology,apple inc,microsoft,android,iphone,macbook,pc,samsung";
+    const category = "android,iphone,macbook,microsoft,pc,samsung,technology";
 
-    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=${category}&skip=21&limit=21&from=2020-12-1&langs=en,ph`, {
+    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=${category}&skip=21&limit=21&from=2021-01-8&langs=en,ph`, {
       method: "GET",
       headers: {
         "x-rapidapi-key": "734c8025e8msh3008a9e94311a28p13ee78jsn4f7e98ac6131",
@@ -22,8 +22,8 @@ const Technology = () => {
       },
     });
 
-    const response = await data.json();
     document.cookie = "SameSite=None; Secure";
+    const response = await data.json();
     setTechnology(response.news);
 
     $(".loading-spinner__container").removeClass("display");
@@ -52,7 +52,18 @@ const Technology = () => {
 
                   <div className="headline-article__body">
                     <h1 className="headline-article__heading">{technology.title}</h1>
-                    <p className="headline-article__description">{technology.description}</p>
+                    <p className="source-name">
+                      Source:{" "}
+                      <a href={`${technology.url}`} target="_blank">
+                        {technology.source}
+                      </a>
+                    </p>
+
+                    <p className="published-date">
+                      Published at <b>{new Date(technology.elabDate).toLocaleString()}</b>
+                    </p>
+
+                    <p className="headline-article__description">{technology.summarization}</p>
 
                     <div className="headline-article-link__container">
                       <a href={`${technology.url}`} className="headline-article-link__link" target="_blank">

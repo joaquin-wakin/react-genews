@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 import $ from "jquery";
 import "regenerator-runtime/runtime";
 
-import disabled from "./Disabled";
+import Disabled from "./Disabled";
 
 import LoadingAnimation from "./LoadingAnimation";
 
@@ -12,7 +12,7 @@ const Headlines = () => {
   const fetchHeadlineArticles = async () => {
     $(".loading-spinner__container").addClass("display");
 
-    const data = await fetch("https://news67.p.rapidapi.com/inter-country?country2=ph&langs=en&country1=ph&skip=1&limit=21", {
+    const data = await fetch("https://news67.p.rapidapi.com/inter-country?country2=ph&langs=en&country1=ph&skip=21&limit=21", {
       method: "GET",
       headers: {
         "x-rapidapi-key": "734c8025e8msh3008a9e94311a28p13ee78jsn4f7e98ac6131",
@@ -21,14 +21,16 @@ const Headlines = () => {
     });
 
     const response = await data.json();
-    document.cookie = "SameSite=None; Secure";
     setHeadlines(response);
+    document.cookie = "SameSite=None; Secure";
+
+    // console.log(response);
 
     $(".loading-spinner__container").removeClass("display");
   };
 
   useEffect(() => {
-    disabled();
+    Disabled();
     fetchHeadlineArticles();
   }, []);
 
@@ -50,7 +52,18 @@ const Headlines = () => {
 
                   <div className="headline-article__body">
                     <h1 className="headline-article__heading">{headline.title}</h1>
-                    <p className="headline-article__description">{headline.description}</p>
+                    <p className="source-name">
+                      Source:{" "}
+                      <a href={`${headline.url}`} target="_blank">
+                        {headline.source}
+                      </a>
+                    </p>
+
+                    <p className="published-date">
+                      Published at <b>{new Date(headline.publishedDate).toLocaleString()}</b>
+                    </p>
+
+                    <p className="headline-article__description">{headline.summarization}</p>
 
                     <div className="headline-article-link__container">
                       <a href={`${headline.url}`} className="headline-article-link__link" target="_blank">

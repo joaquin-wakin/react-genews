@@ -1,6 +1,6 @@
 import $ from "jquery";
 
-const disabled = () => {
+const Disabled = () => {
   $("a, img").on("dragstart", function (event) {
     event.preventDefault();
   });
@@ -10,4 +10,4 @@ const disabled = () => {
   });
 };
 
-export default disabled;
+export default Disabled;

@@ -126,7 +126,7 @@ const App = () => {
           }}
         />
 
-        <Route
+        {/* <Route
           exact
           path="/privacy-policy"
           component={(props) => {
@@ -148,7 +148,7 @@ const App = () => {
               </PageTitle>
             );
           }}
-        />
+        /> */}
 
         <Route
           exact
