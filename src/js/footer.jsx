@@ -34,19 +34,21 @@ const Footer = () => {
           <div className="col-4__small col-6__medium col-4__large">
             <h1 className="footer-heading__other">Contact Us</h1>
             <div>
-              <form className="contact-us__form" name="contact-us" netlify>
+              <form className="contact-us__form">
+                <input type="hidden" name="form-name" value="contact" />
+
                 <div className="input-container">
-                  <i class="bx bx-user"></i>
+                  <i className="bx bx-user"></i>
                   <input type="text" className="input-input" name="username" placeholder="Username" required />
                 </div>
 
                 <div className="input-container">
-                  <i class="bx bx-envelope"></i>
+                  <i className="bx bx-envelope"></i>
                   <input type="email" className="input-input" name="email" placeholder="E-mail" required />
                 </div>
 
                 <div className="input-container">
-                  <i class="bx bx-tag-alt"></i>
+                  <i className="bx bx-tag-alt"></i>
                   <input type="text" className="input-input" name="subject" placeholder="Subject" required />
                 </div>
 
@@ -54,9 +56,7 @@ const Footer = () => {
                   <textarea className="input-input" name="message" placeholder="Type a message..." rows="8" required></textarea>
                 </div>
 
-                <button type="submit" className="send-button">
-                  Send message
-                </button>
+                <button className="send-button">Send message</button>
               </form>
             </div>
           </div>

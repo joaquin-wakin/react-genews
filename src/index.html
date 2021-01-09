@@ -15,7 +15,33 @@
   </head>
 
   <body>
-    <main id="root"></main>
+    <main id="root">
+      <div>
+        <form class="contact-us__form" name="contact-us" netlify="true" netlify-honeypot="bot-field" hidden>
+          <div class="input-container">
+            <i class="bx bx-user"></i>
+            <input type="text" class="input-input" name="username" placeholder="Username" required />
+          </div>
+
+          <div class="input-container">
+            <i class="bx bx-envelope"></i>
+            <input type="email" class="input-input" name="email" placeholder="E-mail" required />
+          </div>
+
+          <div class="input-container">
+            <i class="bx bx-tag-alt"></i>
+            <input type="text" class="input-input" name="subject" placeholder="Subject" required />
+          </div>
+
+          <div class="input-container">
+            <textarea class="input-input" name="message" placeholder="Type a message..." rows="8" required></textarea>
+          </div>
+
+          <button class="send-button">Send message</button>
+        </form>
+      </div>
+    </main>
+
     <script src="js/index.jsx"></script>
   </body>
 </html>
