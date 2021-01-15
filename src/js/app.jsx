@@ -25,9 +25,10 @@ window.dataLayer = window.dataLayer || [];
 function gTag() {
   dataLayer.push(arguments);
 }
+
 gTag("js", new Date());
 
-gTag("config", "G-4WRQCFKJFY");
+gTag("config", "G-SZ0TD1YEYR");
 
 const App = () => {
   return (
