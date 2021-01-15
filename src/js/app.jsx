@@ -17,10 +17,17 @@ import Travel from "./pages/Travel";
 import Trending from "./pages/Trending";
 
 import Footer from "./Footer";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import TermsAndConditions from "./pages/TermsAndConditions";
 
 import PageNotFound from "./pages/PageNotFound";
+
+window.dataLayer = window.dataLayer || [];
+
+function gTag() {
+  dataLayer.push(arguments);
+}
+gTag("js", new Date());
+
+gTag("config", "G-4WRQCFKJFY");
 
 const App = () => {
   return (
@@ -125,30 +132,6 @@ const App = () => {
             );
           }}
         />
-
-        {/* <Route
-          exact
-          path="/privacy-policy"
-          component={(props) => {
-            return (
-              <PageTitle title="GENEWS | Privacy Policy">
-                <PrivacyPolicy {...props} />
-              </PageTitle>
-            );
-          }}
-        />
-
-        <Route
-          exact
-          path="/terms-&amp;-conditions"
-          component={(props) => {
-            return (
-              <PageTitle title="GENEWS | Terms &amp; Conditions">
-                <TermsAndConditions {...props} />
-              </PageTitle>
-            );
-          }}
-        /> */}
 
         <Route
           exact
