@@ -26,14 +26,13 @@ const NavMenu = () => {
   return (
     <div className="nav-menu__container">
       <ul className="nav-menu__list">
-        <NavLink link="/" linkName="Today's Headlines" />
+        <NavLink link="/" linkName="Trending" />
         <NavLink link="/business" linkName="Business" />
-        <NavLink link="/covid-19" linkName="COVID-19" />
+        <NavLink link="/health" linkName="Health" />
         <NavLink link="/politics" linkName="Politics" />
         <NavLink link="/sports" linkName="Sports" />
         <NavLink link="/technology" linkName="Technology" />
         <NavLink link="/travel" linkName="Travel" />
-        <NavLink link="/trending" linkName="Trending" />
       </ul>
     </div>
   );

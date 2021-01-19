@@ -9,12 +9,11 @@ import MobileNavigation from "./MobileNavigation";
 
 import TodaysHeadlines from "./Headlines";
 import Business from "./pages/Business";
-import COVID19 from "./pages/COVID-19";
+import Health from "./pages/Health";
 import Politics from "./pages/Politics";
 import Sports from "./pages/Sports";
 import Technology from "./pages/Technology";
 import Travel from "./pages/Travel";
-import Trending from "./pages/Trending";
 
 import Footer from "./Footer";
 
@@ -64,11 +63,11 @@ const App = () => {
 
         <Route
           exact
-          path="/covid-19"
+          path="/health"
           component={(props) => {
             return (
-              <PageTitle title="GENEWS | COVID-19">
-                <COVID19 {...props} />
+              <PageTitle title="GENEWS | Health">
+                <Health {...props} />
               </PageTitle>
             );
           }}
@@ -117,18 +116,6 @@ const App = () => {
             return (
               <PageTitle title="GENEWS | Travel">
                 <Travel {...props} />
-              </PageTitle>
-            );
-          }}
-        />
-
-        <Route
-          exact
-          path="/trending"
-          component={(props) => {
-            return (
-              <PageTitle title="GENEWS | Trending">
-                <Trending {...props} />
               </PageTitle>
             );
           }}

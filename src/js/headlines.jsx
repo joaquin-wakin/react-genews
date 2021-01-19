@@ -37,9 +37,9 @@ const Headlines = () => {
   return (
     <section id="headlines">
       <div className="container-fluid">
-        <h1 className="page-heading">Today&apos;s Headlines</h1>
+        <h1 className="page-heading">Trending News</h1>
 
-        <LoadingAnimation text="Getting the latest news..." />
+        <LoadingAnimation text="Getting trending news..." />
 
         <div className="grid headlines-grid">
           {headlines.map((headline) => {
