@@ -38,22 +38,13 @@ const MobileNavigation = () => {
             <ul className="mobile-links__list">
               <MobileNavLink link="/" linkName="Today's Headlines" />
               <MobileNavLink link="/business" linkName="Business" />
-              <MobileNavLink link="/covid-19" linkName="COVID-19" />
+              <MobileNavLink link="/health" linkName="Health" />
               <MobileNavLink link="/politics" linkName="Politics" />
               <MobileNavLink link="/sports" linkName="Sports" />
               <MobileNavLink link="/technology" linkName="Technology" />
               <MobileNavLink link="/travel" linkName="Travel" />
-              <MobileNavLink link="/trending" linkName="Trending" />
             </ul>
           </div>
-
-          {/* <h3 className="mobile-nav__text">Information</h3>
-          <div className="mobile-links">
-            <ul className="mobile-links__list">
-              <MobileNavLink link="/privacy-policy" linkName="Privacy Policy" />
-              <MobileNavLink link="/terms-&amp;-conditions" linkName="Terms &amp; Conditions" />
-            </ul>
-          </div> */}
 
           <div id="copyrights">
             <p>&copy; 2021 GENEWS | Get the latest news. All Rights Reserved</p>
