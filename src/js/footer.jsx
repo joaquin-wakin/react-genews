@@ -6,7 +6,7 @@ import favicon from "./favicon-white.png";
 const Footer = () => {
   return (
     <footer>
-      <div className="container-fluid">
+      <div className="container">
         <div className="row">
           <div className="col-4__small col-6__medium col-4__large">
             <h1 className="footer-heading">

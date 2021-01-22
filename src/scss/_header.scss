@@ -11,6 +11,7 @@ header {
     .container-fluid {
       align-items: center;
       display: flex;
+      position: relative;
     }
   }
 }
@@ -21,13 +22,14 @@ header {
   display: flex;
   font-size: $title-size;
   font-weight: 700;
-  margin-right: auto;
   text-decoration: none;
   text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
 
   img {
     margin-right: 1rem;
-    width: 3rem;
+    width: 2.25rem;
   }
 }
 
@@ -75,13 +77,30 @@ header {
 }
 
 .mobile-nav-hamburger {
+  position: absolute;
+  right: 1rem;
+
   .hamburger-icon {
     color: $white-color;
     font-size: 2.5rem;
   }
 }
 
+@media (min-width: 768px) {
+  header {
+    .nav-container {
+      .container-fluid {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
 @media (min-width: 992px) {
+  .nav-logo {
+    margin-bottom: 1rem;
+  }
+
   .nav-menu__container {
     display: block;
   }

@@ -7,7 +7,7 @@ import PageTitle from "./PageTitle";
 import Header from "./Header";
 import MobileNavigation from "./MobileNavigation";
 
-import TodaysHeadlines from "./Headlines";
+import Trending from "./Trending";
 import Business from "./pages/Business";
 import Health from "./pages/Health";
 import Politics from "./pages/Politics";
@@ -18,16 +18,6 @@ import Travel from "./pages/Travel";
 import Footer from "./Footer";
 
 import PageNotFound from "./pages/PageNotFound";
-
-window.dataLayer = window.dataLayer || [];
-
-function gTag() {
-  dataLayer.push(arguments);
-}
-
-gTag("js", new Date());
-
-gTag("config", "G-SZ0TD1YEYR");
 
 const App = () => {
   return (
@@ -43,7 +33,7 @@ const App = () => {
           component={(props) => {
             return (
               <PageTitle title="GENEWS | Get the latest news">
-                <TodaysHeadlines {...props} />
+                <Trending {...props} />
               </PageTitle>
             );
           }}

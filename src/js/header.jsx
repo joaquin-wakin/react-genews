@@ -48,6 +48,19 @@ const NavLink = (props) => {
   );
 };
 
+const linkColor = document.querySelectorAll(".nav-menu__link");
+
+const colorLink = () => {
+  linkColor.forEach((link) => {
+    link.classList.remove("active");
+    this.classList.add("active");
+  });
+};
+
+linkColor.forEach((link) => {
+  link.addEventListener("click", colorLink);
+});
+
 const MobileNavHamburger = () => {
   function SlideMenu() {
     $("body").addClass("disabled-scroll");

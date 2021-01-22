@@ -12,9 +12,9 @@ const Sports = () => {
   const fetchSports = async () => {
     $(".loading-spinner__container").addClass("display");
 
-    const category = "basketball,football,soccer,swimming,volleyball";
+    const category = "basketball,football,soccer,volleyball";
 
-    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=${category}&skip=21&limit=21&from=2021-01-08&langs=en,ph`, {
+    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=${category}&limit=21&from=2021-01-01&langs=en&skip=21`, {
       method: "GET",
       headers: {
         "x-rapidapi-key": "734c8025e8msh3008a9e94311a28p13ee78jsn4f7e98ac6131",

@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import $ from "jquery";
 import "regenerator-runtime/runtime";
 
-import disabled from "../Disabled";
+import Disabled from "./Disabled";
 
-import LoadingAnimation from "../LoadingAnimation";
+import LoadingAnimation from "./LoadingAnimation";
 
 const Trending = () => {
   const [trending, setTrending] = useState([]);
@@ -12,7 +12,7 @@ const Trending = () => {
   const fetchTrending = async () => {
     $(".loading-spinner__container").addClass("display");
 
-    const data = await fetch("https://news67.p.rapidapi.com/trending?limit=21&skip=21&langs=en", {
+    const data = await fetch("https://news67.p.rapidapi.com/inter-country?country2=ph&langs=en&country1=ph&skip=21&limit=21", {
       method: "GET",
       headers: {
         "x-rapidapi-key": "734c8025e8msh3008a9e94311a28p13ee78jsn4f7e98ac6131",
@@ -20,26 +20,26 @@ const Trending = () => {
       },
     });
 
-    document.cookie = "SameSite=None;Secure";
     const response = await data.json();
     setTrending(response);
+    document.cookie = "SameSite=None; Secure";
 
     $(".loading-spinner__container").removeClass("display");
   };
 
   useEffect(() => {
-    disabled();
+    Disabled();
     fetchTrending();
   }, []);
 
   return (
-    <section id="trending">
+    <section id="headlines">
       <div className="container-fluid">
-        <h1 className="page-heading">Trending</h1>
+        <h1 className="page-heading">Trending News</h1>
 
-        <LoadingAnimation text="Getting latest trending news..." />
+        <LoadingAnimation text="Getting trending news..." />
 
-        <div className="grid">
+        <div className="grid headlines-grid">
           {trending.map((trending) => {
             return (
               <div className="grid-col" key={`${trending.id}`}>

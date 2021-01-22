@@ -14,7 +14,7 @@ const Technology = () => {
 
     const category = "android,iphone,macbook,microsoft,pc,samsung,technology";
 
-    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=${category}&skip=21&limit=21&from=2021-01-8&langs=en,ph`, {
+    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=${category}&limit=21&from=2021-01-20&langs=en`, {
       method: "GET",
       headers: {
         "x-rapidapi-key": "734c8025e8msh3008a9e94311a28p13ee78jsn4f7e98ac6131",
