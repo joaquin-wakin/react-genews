@@ -12,7 +12,7 @@ const Travel = () => {
   const fetchTravel = async () => {
     $(".loading-spinner__container").addClass("display");
 
-    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=travel&skip=1&limit=21&from=2021-01-20&langs=en,ph`, {
+    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=travel&limit=21&from=2021-01-20&langs=en`, {
       method: "GET",
       headers: {
         "x-rapidapi-key": "734c8025e8msh3008a9e94311a28p13ee78jsn4f7e98ac6131",
