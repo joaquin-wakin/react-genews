@@ -12,10 +12,10 @@ const Trending = () => {
   const fetchTrending = async () => {
     $(".loading-spinner__container").addClass("display");
 
-    const data = await fetch("https://news67.p.rapidapi.com/inter-country?country2=ph&langs=en&country1=ph&skip=21&limit=21", {
+    const data = await fetch("https://news67.p.rapidapi.com/inter-country?country2=ph&langs=en&country1=ph&limit=21&skip=21", {
       method: "GET",
       headers: {
-        "x-rapidapi-key": "734c8025e8msh3008a9e94311a28p13ee78jsn4f7e98ac6131",
+        "x-rapidapi-key": "90001d1797msh553ef0c39769ba6p133ae0jsnc03200d885bc",
         "x-rapidapi-host": "news67.p.rapidapi.com",
       },
     });

@@ -12,10 +12,17 @@ const Business = () => {
   const fetchBusiness = async () => {
     $(".loading-spinner__container").addClass("display");
 
-    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=business&skip=21&limit=21&from=2021-01-08&langs=en`, {
+    var currentDate = new Date();
+    var month = String(currentDate.getMonth() + 1).padStart(2, "0");
+    var day = String(currentDate.getDate()).padStart(2, "0");
+    var year = currentDate.getFullYear();
+
+    currentDate = month + "-" + day + "-" + year;
+
+    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=business&limit=21&from=${year}&langs=en&skip=21`, {
       method: "GET",
       headers: {
-        "x-rapidapi-key": "734c8025e8msh3008a9e94311a28p13ee78jsn4f7e98ac6131",
+        "x-rapidapi-key": "90001d1797msh553ef0c39769ba6p133ae0jsnc03200d885bc",
         "x-rapidapi-host": "news67.p.rapidapi.com",
       },
     });

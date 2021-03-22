@@ -12,10 +12,13 @@ function Health() {
   const fetchCOVID19 = async () => {
     $(".loading-spinner__container").addClass("display");
 
-    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=health&skip=42&limit=21&from=2021-01-08&langs=en`, {
+    const category = "health";
+    var currentYear = new Date().getFullYear();
+
+    const data = await fetch(`https://news67.p.rapidapi.com/topic-research?search=${category}&limit=21&from=${currentYear}&langs=en&skip=21`, {
       method: "GET",
       headers: {
-        "x-rapidapi-key": "734c8025e8msh3008a9e94311a28p13ee78jsn4f7e98ac6131",
+        "x-rapidapi-key": "90001d1797msh553ef0c39769ba6p133ae0jsnc03200d885bc",
         "x-rapidapi-host": "news67.p.rapidapi.com",
       },
     });
